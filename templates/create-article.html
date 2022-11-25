@@ -1,0 +1,34 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+   
+
+
+  <h1>Create Article</h1>
+  {% from "includes/_formhelpers.html" import render_field %}
+  <form class="form-control" method="POST" enctype=multipart/form-data action="">
+    <br>
+    <input class="form-control" type=file name=photo accept="image/png, image/gif, image/jpeg" required> <br>
+    <div class="form-group">
+      {{ render_field(form.title, class_="form-control") }}
+    </div> <br>
+    <div class="form-group">
+        {{ render_field(form.description, class_="form-control") }}
+      </div> <br>
+    <div class="form-group">
+      {{ render_field(form.body, class_="form-control", id="editor") }}
+    </div> <br>
+    <div class="form-group form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1" name="featured" unchecked>
+        <label class="form-check-label" for="exampleCheck1">Make Featured</label>
+      </div> <br>
+    <p><input class="btn btn-primary" type="submit" value="Submit">
+  </form>
+
+  <br> <br>
+
+  <script src="//cdn.ckeditor.com/4.6.2/basic/ckeditor.js"></script>
+  <script type="text/javascript">
+    CKEDITOR.replace('editor')
+  </script>
+{% endblock %}

@@ -1,0 +1,79 @@
+/* scroll bar */
+
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+/* background: red; */
+border: rgba(255, 255, 255, 0.171) 2px solid;
+border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+border-color: #ffffff47;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,500&display=swap'); */
+
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap'); */
+
+@font-face {
+    font-family: 'Lunema';
+    src: url(../fonts/Lunema_Bold.otf) format('opentype');
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+
+body{
+    background-color: black;
+}
+#page{
+    width: calc(100vw - calc(100vw - 100%));
+    height: fit-content;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+#hero{
+    width: 100%;
+    height: 100vh;
+    /* height: fit-content; */
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#grid{
+    height: 100%;
+    width: auto;
+}
+
+@media all and (orientation:landscape) {
+    #grid{
+        /* background-color: red; */
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+
+.x{
+    border: 2px dashed rgba(255, 255, 255, 0.226);
+    /* background-color: rgba(255, 255, 255, 0.226); */
+}

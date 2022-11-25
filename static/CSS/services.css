@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+#blur{
+    width: 70%;
+    height: 30px;
+    background-color: white;
+    position: absolute;
+    filter: blur(110px);
+}
+
+#main-content{
+    font-size: 10px;
+    position: absolute;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#main-content > h1{
+    font-family: 'Lunema';
+    font-size: 5em;
+    font-weight: 900;
+}
+
+#sharp-line{
+    /* background-color: white; */
+    height: 2px;
+    width: 100%;
+    margin: 3em 0 3.8em 0;
+    background-image: linear-gradient(to right, black , white, black);
+}
+
+#marquee-clone{
+    width: 50em;
+    height: 8em;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-start;
+    border-radius: 50%;
+}
+
+.mov-container{
+    /* width: 200%; */
+    width: 72em;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    /* flex-wrap: wrap; */
+    border-left: none;
+    border-right: none;
+    
+
+}
+
+#mov-1{
+    animation: marquee 8s linear infinite;
+}
+
+.icon-circle{
+    width: 6em;
+    height: 6em;
+    border-radius: 50%;
+    background-color: black;
+    margin: 0 1.5em;
+    border: 2px solid rgba(255, 255, 255, 0.317);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icon-circle > img{
+    height: 50%;
+    width: 50%;
+}
+
+#blob-1{
+    position: absolute;
+    width: 40%;
+    top: 0;
+    right: 0;
+    transform: translate(40%, -40%);
+    max-width: 400px;
+    z-index: 0;
+}
+
+#blob-2{
+    position: absolute;
+    width: 55%;
+    bottom: 0;
+    left: 0;
+    transform: translate(-40%, 0);
+    max-width: 400px;
+}
+
+@keyframes marquee {
+    0%{
+        margin-left: 0;
+    }
+    100%{
+        margin-left: -72em;
+    }
+}
+
+
+#incrementSec{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    margin-bottom: 50px;
+    padding-bottom: 50px;
+    /* border-top: 2px solid #242424; */
+    border-bottom: 2px solid #191919;
+}
+
+.incrementUnit > h2{
+    text-align: center;
+    margin-bottom: 0.7em;
+    font-size: 6em;
+    font-weight: 700;
+}
+
+.incrementUnit > p{
+    text-align: center;
+    font-size: 2em;
+    font-weight: 400;
+    color: #525252;
+}
+
+
+.mobile-design{
+    width: 100%;
+    /* height: 30vh; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.left{
+    width: 55%;
+    margin-left: 5%;
+}
+
+.left > h1{
+    font-size: 6em;
+    font-weight: 700;
+}
+.left > p{
+    font-size: 3em;
+    color: #838383;
+}
+.right{
+    width: 40%;
+}
+
+.right > img{
+    width: 100%;
+}
+
+.d1{
+    flex-direction: row-reverse;
+    margin-top: 50px;
+}
+.d1 > .left {
+    margin-right: 5%;
+    margin-left: 0;
+}
+
+#waves{
+    width: 100%;
+}
+
+#wait-sec{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#wait-sec > h1{
+    font-weight: 700;
+    font-size: 2em;
+}
+
+#wait-sec > a{
+    font-size: 1.2em;
+    text-decoration: none;
+    border: 3px solid white;
+    padding: 0.8em 3em;
+    margin: 2em 0 5em 0;
+}
+
+
+
+@media screen and (min-width: 0px){
+    #main-content{
+        font-size: 6px;
+    }
+    #incrementSec{
+        font-size: 4px;
+    }
+
+    .left > h1{
+        font-size: 1.7em;
+    }
+    .left > p{
+        font-size: 1em;
+    }
+}
+
+@media screen and (min-width: 480px){
+    #main-content{
+        font-size: 7px;
+    }
+    #incrementSec{
+        font-size: 5px;
+    }
+    .left > h1{
+        font-size: 2.2em;
+    }
+    .left > p{
+        font-size: 1.2em;
+    }
+    #wait-sec > h1{
+        font-size: 2.6em;
+    }
+    #wait-sec > a{
+        font-size: 1.5em;
+
+    }
+}
+
+@media screen and (min-width: 800px){
+    #main-content{
+        font-size: 8.5px;
+    }
+    #incrementSec{
+        font-size: 6px;
+    }
+    .left > h1{
+        font-size: 3.2em;
+    }
+    .left > p{
+        font-size: 1.7em;
+    }
+    #wait-sec > h1{
+        font-size: 3em;
+    }
+    #wait-sec > a{
+        font-size: 1.8em;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    #main-content{
+        font-size: 9.5px;
+    }
+    #incrementSec{
+        font-size: 8px;
+    }
+    .left > h1{
+        font-size: 4em;
+    }
+    .left > p{
+        font-size: 2.2em;
+    }
+    #wait-sec > h1{
+        font-size: 4em;
+    }
+    #wait-sec > a{
+        font-size: 2.2em;
+        margin-bottom: 10em;
+    }
+}
+
+@media screen and (min-width: 1400px){
+    #main-content{
+        font-size: 11px;
+    }
+    #incrementSec{
+        font-size: 10px;
+    }
+
+    #blob-2{
+        width: 35%;
+    }
+    .left > h1{
+        font-size: 4.7em;
+    }
+    .left > p{
+        font-size: 2.8em;
+    }
+    #wait-sec > h1{
+        font-size: 5em;
+    }
+    #wait-sec > a{
+        font-size: 2.9em;
+        margin-bottom: 10em;
+    }
+}
+
+@media screen and (min-width: 1600px){
+    .left > h1{
+        font-size: 5.7em;
+    }
+    .left > p{
+        font-size: 3.8em;
+    }
+    #wait-sec > h1{
+        font-size: 5.8em;
+    }
+    #wait-sec > a{
+        font-size: 3.2em;
+        margin-bottom: 10em;
+    }
+}

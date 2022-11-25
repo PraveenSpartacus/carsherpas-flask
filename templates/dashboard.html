@@ -1,0 +1,20 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    <h1 class="text-center">What do you want to do?</h1> <br> <br>
+    <div class=" container d-flex align-items-center justify-content-center">
+        <div class="btn-group">
+            <div class="btn btn-success"><a class="btn btn-success" href="/create-article">Create Article</a> </div>
+            <div class="btn btn-primary"><a class="btn btn-primary" href="/news">View Articles</a> </div>
+            <div class="btn btn-danger">
+                <a class="btn btn-danger" href="/delete-article">Delete Article</a>
+            </div>
+            <div class="btn btn-primary">
+                <a class="btn btn-primary" href="/slider-upload">Upload to Slider</a>
+            </div>
+            <div class="btn btn-warning">
+                <a class="btn btn-warning" href="/review-upload">Upload Reviews</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

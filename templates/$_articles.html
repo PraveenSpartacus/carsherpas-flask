@@ -1,0 +1,35 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    <h2>Featured Articles</h2>
+    <ul>
+    {% for article in featured_articles %}
+    <li>
+        <ul>  
+            <li>{{article.id}}</li>
+            <li> <a href="/article/{{article.id}}"> {{article.title}}</a> </li>
+            <li>{{article.description | safe}}</li>
+            <li>{{article.date}}</li>
+        </ul> 
+    </li>
+    <hr>
+    {% endfor %}
+    </ul>
+
+    <br><br><br>
+
+    <h2>All Articles</h2>
+    <ul>
+    {% for article in articles %}
+    <li>
+        <ul>  
+            <li>{{article.id}}</li>
+            <li> <a href="/article/{{article.id}}"> {{article.title}}</a> </li>
+            <li>{{article.description | safe}}</li>
+            <li>{{article.date}}</li>
+        </ul> 
+    </li>
+    <hr>
+    {% endfor %}
+    </ul>
+{% endblock %}

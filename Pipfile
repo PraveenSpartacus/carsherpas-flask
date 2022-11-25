@@ -1,0 +1,17 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+flask = "*"
+flask-mysqldb = "*"
+flask-wtf = "*"
+passlib = "*"
+flask-uploads = "*"
+flask-reuploaded = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.10"

@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+#hero-container{
+    position: absolute;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center;
+    justify-content: center; */
+    top: 30%;
+    font-size: 10px;
+}
+
+#top-hero, #bottom-hero{
+    width: 100%;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#bottom-hero{
+    display: flex;
+    justify-content: center;
+}
+
+#top-hero > h1{
+    font-size: 3em;
+    margin: 0.5em;
+}
+
+#top-hero > p{
+    font-size: 2em;
+    color: #787878;
+    width: 80%;
+    margin: 0 auto;
+}
+
+#lottie-container{
+    position: relative;
+    height: 50vh;
+    width: 500px;
+    /* width: 100%;
+    height: 100%; */
+}
+
+.lottie-player{
+    position: absolute;
+    /* width: 150%; */
+    width: 200%;
+    height: 200%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+.waves{
+    width: 100%;
+}
+
+
+#brand-sec{
+    width: 60%;
+    margin: 20px auto;
+    height: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+#brand-sec > img{
+    width: 20%;
+    max-width: 100px;
+}
+
+#achievements-heading{
+    text-align: center;
+    position: relative;
+    /* bottom: 15vh; */
+    margin-bottom: 15%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#ach-section{
+    width: 100%;
+    /* height: 1000px; */
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#ach-section > img{
+    /* position: absolute; */
+    width: 15%;
+    /* left: 10%; */
+    max-width: 150px;
+    margin-left: 10%;
+}
+.ach-unit{
+    position: absolute;
+    width: 60%;
+    height: 13%;
+    max-height: 150px;
+    font-size: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    left: 30%;
+}
+.ach-unit > h1{
+    font-size: 2.2em;
+}
+.ach-unit > p{
+    color: #AFAFAF;
+    font-size: 1em;
+}
+#ach-unit-1{
+    top: 0;    
+}
+#ach-unit-2{
+    top: 43%;    
+}
+
+#ach-unit-3{
+    bottom: 1%;    
+}
+
+#join-us-sec{
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#join-us-sec > h1{
+    font-size: 2.2em;
+    font-weight: 700;
+}
+
+#join-us-sec > a{
+    font-size: 1.5em;
+    text-decoration: none;
+    padding: 0.7em 4em;
+    border: 3px solid white;
+    margin: 1.5em;
+}
+.container{
+    width: 100%;
+    overflow-x: hidden;
+    position: relative;
+    margin: 10vw 0;
+}
+#slider{
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    /* height: 400px; */
+    max-height: 500px;
+    overflow-y: hidden;
+    /* margin-left: -50vw; */
+    transition: margin-left 0.4s ease;
+}
+
+.img1{
+    margin-left: 0vw;
+}
+ 
+
+.img2{
+    margin-left: -100vw;
+}
+.img3{
+    margin-left: -200vw;
+}
+.img4{
+    margin-left: -300vw;
+}
+
+.image-container{
+    width: 100%;
+    /* height: 100%; */
+}
+ .image-container > img{
+    width: 100vw;
+} 
+.slider-controls{
+    width: 100%;
+    height: 100%;
+}
+.left-arrow{
+    width: 50px;
+    height: 50px;
+    /* background-color: #787878; */
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translate(0, -50%);
+    cursor: pointer;
+}
+
+.left-arrow > img{
+    rotate: 180deg;
+}
+
+.left-arrow > img, .right-arrow > img{
+    width: 100%;
+}
+
+.right-arrow{
+    width: 50px;
+    cursor: pointer;
+    height: 50px;
+    /* background-color: #787878; */
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translate(0, -50%);
+}
+
+
+
+@media screen and (min-width: 0px) {
+    #brand-sec{
+        height: 70px;
+    }
+    #top-hero > h1{
+        font-size: 2em;
+    }
+    #top-hero > p{
+        font-size: 1.5em;
+    }
+    #lottie-container{
+        height: 35vh;
+        /* width: 400px; */
+    }
+}
+
+@media screen and (min-width: 480px){
+    #top-hero > h1{
+        font-size: 2.5em;
+    }
+    #top-hero > p{
+        font-size: 1.7em;
+    }
+    #lottie-container{
+        /* height: 40vh;
+        width: 400px; */
+    }
+    #achievements-heading{
+        font-size: 40px;
+    }
+    .ach-unit > h1{
+        font-size: 2.7em;
+    }
+    .ach-unit > p{
+        color: #AFAFAF;
+        font-size: 1.5em;
+    }
+    #join-us-sec{
+        font-size: 13px;
+    }
+}
+
+@media screen and (min-width: 800px){
+    #top-hero > h1{
+        font-size: 3em;
+    }
+    #top-hero > p{
+        font-size: 2.3em;
+    }
+    #lottie-container{
+        height: 60vh;
+    }
+    .ach-unit > h1{
+        font-size: 3.2em;
+    }
+    .ach-unit > p{
+        color: #AFAFAF;
+        font-size: 1.8em;
+    }
+
+    #achievements-heading{
+        font-size: 50px;
+        bottom: 7vh;
+        margin-bottom: calc(10% - 7vh);
+    }
+
+    #join-us-sec{
+        height: 50vh;
+        font-size: 16px;
+    }
+
+    #join-us-sec > a{
+        border: 5px solid white;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    #hero-container{
+        top: 25%;
+    }
+    #top-hero > h1{
+        font-size: 5em;
+    }
+    #top-hero > p{
+        font-size: 2.8em;
+    }
+    .ach-unit{
+        left: calc(10% + 230px);
+    }
+    .ach-unit > h1{
+        font-size: 3.8em;
+    }
+    .ach-unit > p{
+        color: #AFAFAF;
+        font-size: 2.2em;
+    }
+    #achievements-heading{
+        font-size: 50px;
+        bottom: 10vh;
+        margin-bottom: calc(10% - 10vh);
+    }
+    #join-us-sec{
+        height: 100vh;
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 1600px){
+    
+    #top-hero > h1{
+        font-size: 5.5em;
+    }
+    #top-hero > p{
+        font-size: 3em;
+    }
+    #lottie-container{
+        height: 70vh;
+    }
+    .ach-unit > h1{
+        font-size: 4.5em;
+    }
+    .ach-unit > p{
+        color: #AFAFAF;
+        font-size: 2.9em;
+    }
+
+    #achievements-heading{
+        font-size: 60px;
+        bottom: 23vh;
+        margin-bottom: calc(10% - 23vh);
+    }
+
+    #join-us-sec{
+        font-size: 26px;
+    }
+
+}

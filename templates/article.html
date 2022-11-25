@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+  <img style="width: 500px;" src="/static/img/{{article.img_name}}" alt="">
+  <h1>{{article.title}}</h1>
+  <small>{{article.date}}</small>
+  <p>{{article.description | safe}}</p>
+  <hr>
+  <div>
+    {{article.body | safe}}
+  </div>
+{% endblock %}

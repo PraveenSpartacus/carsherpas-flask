@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+#navbar{
+    width: 80%;
+    height: 170px;
+    position: absolute;
+    /* background-color: red; */
+    top: 0;
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    /* border: 1px dashed white ; */
+    z-index: 10;
+}
+
+.nav-item{
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+    font-style: normal;
+}
+
+#nav-logo{
+    height: 70px;
+}
+
+#nav-mode{
+    height: 25px;
+}
+
+#mid-nav{
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+@media screen and (min-width: 1300px){
+    #navbar{
+        display: flex;
+    }
+}

@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div class="">
+    <h1 class="display-4"></h1>
+    {% if danger %}
+        <div class="alert alert-danger" role="alert">
+            {{message}}
+        </div>
+    {% else %}
+    <div class="alert alert-success" role="alert">
+        {{message}}
+    </div>
+    {% endif %}
+    <a class="btn btn-primary" href="/dashboard" role="button"> Go Back</a>
+    </p>
+  </div>
+{% endblock %}

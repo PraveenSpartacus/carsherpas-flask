@@ -1,0 +1,39 @@
+{% extends 'layout.html' %}
+
+
+{% block body %}
+<h1>Upload Reviews</h1>
+
+<form enctype="multipart/form-data" id="form" action="" method="POST">
+    <hr>
+    <div class="form-group">
+        <label>Review Number - </label>
+        <select name="reviewType" id="">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select>
+    </div> <br>
+    <div class="form-group">
+        <label>Name</label>
+        <input class="form-control" type="text" name="name"  required>
+    </div> <br>
+    <div class="form-group">
+        <label>Designantion</label>
+        <input class="form-control" type="text" name="designation"  required>
+    </div> <br>
+    
+    <div class="form-group">
+        <label>Upload Photo</label>
+        <input class="form-control" type="file" name="img" accept="image/png, image/gif, image/jpeg" required>
+    </div> <br>
+    <div class="form-group">
+        <label>Review</label>
+        <textarea form="form" class="form-control"  name="reviewText"  required></textarea>
+    </div> <br>
+
+    <input class="btn btn-primary form-control" type="submit" value="Submit">
+</form>
+
+
+{% endblock %}

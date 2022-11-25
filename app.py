@@ -220,18 +220,19 @@ def slider_upload():
         img4 = photos.save(request.files['img4'], name="img.")
         
         cur = mysql.connection.cursor()
-        cur.execute("SELECT * FROM slider;")
-        record = cur.fetchall()
-        img1_x = record[0]['img1']
-        img2_x = record[0]['img2']
-        img3_x = record[0]['img3']
-        img4_x = record[0]['img4']
-        os.remove(os.path.join(app.config['UPLOADED_PHOTOS_DEST'], img1_x))
-        os.remove(os.path.join(app.config['UPLOADED_PHOTOS_DEST'], img2_x))
-        os.remove(os.path.join(app.config['UPLOADED_PHOTOS_DEST'], img3_x))
-        os.remove(os.path.join(app.config['UPLOADED_PHOTOS_DEST'], img4_x))
+        count = cur.execute("SELECT * FROM slider;")
+        if count > 0:
+            record = cur.fetchall()
+            img1_x = record[0]['img1']
+            img2_x = record[0]['img2']
+            img3_x = record[0]['img3']
+            img4_x = record[0]['img4']
+            os.remove(os.path.join(app.config['UPLOADED_PHOTOS_DEST'], img1_x))
+            os.remove(os.path.join(app.config['UPLOADED_PHOTOS_DEST'], img2_x))
+            os.remove(os.path.join(app.config['UPLOADED_PHOTOS_DEST'], img3_x))
+            os.remove(os.path.join(app.config['UPLOADED_PHOTOS_DEST'], img4_x))
 
-        cur.execute("DELETE FROM slider;")
+            cur.execute("DELETE FROM slider;")
         
         cur.execute("INSERT INTO slider(img1, img2, img3, img4) VALUES(%s, %s, %s, %s)",( img1, img2, img3, img4))
         mysql.connection.commit()

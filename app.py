@@ -31,7 +31,7 @@ def upload():
 app.config['MYSQL_HOST'] = 'flasksample.mysql.pythonanywhere-services.com'
 app.config['MYSQL_USER'] = 'flasksample'
 app.config['MYSQL_PASSWORD'] = 'entertheNEWDRAGON@007'
-app.config['MYSQL_DB'] = 'sample'
+app.config['MYSQL_DB'] = 'flasksample$sample'
 app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
 # init MYSQL
 mysql = MySQL(app)

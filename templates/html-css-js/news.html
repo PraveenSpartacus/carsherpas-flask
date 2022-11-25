@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/CSS/base.css">
+    <link rel="stylesheet" href="static/CSS/sidebar.css">
+    <link rel="stylesheet" href="static/CSS/navbar.css">
+    <title>News</title>
+    <link rel="stylesheet" href="static/CSS/news.css">
+</head>
+<body>
+    <div id="page">
+        <section id="hero">
+            <nav id="navbar">
+                <a class="nav-item" href="/">
+                    <img id="nav-logo" src="static/Assets/logo.svg" alt="">
+                </a>
+                <div id="mid-nav">
+                    <a class="nav-item" href="/spotlight">Spotlight</a>
+                    <a class="nav-item" href="/products">Products</a>
+                    <a class="nav-item" href="/services">Services</a>
+                    <a class="nav-item" href="/studio">Studio</a>
+                    <a class="nav-item" href="/news">News</a>
+                </div>
+                <a class="nav-item" href="/">
+                    <img id="nav-mode" src="static/Assets/sun.svg" alt="">
+                </a>
+            </nav>
+            <div id="sidebar-container">
+                <div id="sidebar">
+                    <div id="side-back">
+                        <img src="static/Assets/side-back.svg" alt="">
+                    </div>
+                    <nav id="nav-bar">
+                        <div class="nav-item">
+                            <a href="/">
+                                <img src="static/Assets/home-icon.svg" alt="">
+                                <p>Home</p>
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="/spotlight">
+                                <img src="static/Assets/spotlight-icon.svg" alt="">
+                                <p>Spotlight</p>
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="/products">
+                                <img src="static/Assets/products-icon.svg" alt="">
+                                <p>Products</p>
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="/services">
+                                <img src="static/Assets/services-icon.svg" alt="">
+                                <p>Services</p>
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="/studio">
+                                <img src="static/Assets/studio-icon.svg" alt="">
+                                <p>Studio</p>
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="/news">
+                                <img src="static/Assets/news-icon.svg" alt="">
+                                <p>News</p>
+                            </a>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <div id="hamburger">
+                <img src="static/Assets/hamburger.svg" alt="">
+            </div>
+            <h1 id="page-label">NEWS</h1>
+            <div class="news-section">
+                {% if featured_articles|length > 0 %}
+                <h1>Featured Articles</h1>
+                <div class="news-cards-container ">
+                    {% for article in featured_articles %}
+                    <a href="/article/{{article.id}}" class="news-card">
+                        <div class="n_left ">
+                            <img id="cover" src="static/img/{{article.img_name}}" alt="">
+                        </div>
+                        <div class="n_right ">
+                            <p class="article-date">{{article.date}}</p>
+                            <h3 class="article-title">{{article.title}}</h3>
+                            <p class="article-description">
+                                {{article.description}}
+                            </p>
+                        </div>
+                    </a>
+                    {% endfor %}
+                </div>
+                {% endif %}
+            </div>
+            <div class="news-section">
+                <img id="waves2" src="static/Assets/News/waves2.svg" alt="">
+                {% if featured_articles|length > 0 %}
+                    <h1>All Articles</h1>
+                {% else %}
+                    <h1>No Articles</h1>
+                {% endif %}
+                <div class="news-cards-container ">
+                    {% for article in articles %}
+                    <a href="/article/{{article.id}}" class="news-card">
+                        <div class="n_left ">
+                            <img src="static/img/{{article.img_name}}" alt="">
+                        </div>
+                        <div class="n_right ">
+                            <p class="article-date">{{article.date}}</p>
+                            <h3 class="article-title">{{article.title}}</h3>
+                            <p class="article-description">
+                                {{article.description}}
+                            </p>
+                        </div>
+                    </a>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+<script src="static/JS/sidebar.js"></script>
+</html>

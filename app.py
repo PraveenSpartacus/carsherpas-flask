@@ -218,6 +218,7 @@ def slider_upload():
         img2 = photos.save(request.files['img2'], name="img.")
         img3 = photos.save(request.files['img3'], name="img.")
         img4 = photos.save(request.files['img4'], name="img.")
+        print("File Names:", img1, img2, img3, img4)
         
         cur = mysql.connection.cursor()
         count = cur.execute("SELECT * FROM slider;")

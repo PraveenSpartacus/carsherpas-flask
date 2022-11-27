@@ -14,12 +14,12 @@ function hello(){
     HEIGHT = 789;
 
     circles.forEach(element => {
-        element.setAttribute('cx','0px');
-        element.setAttribute('cy','0px');
+        element.setAttribute('cx','200');
+        element.setAttribute('cy','200');
     });
 
-    var cx = 0
-    var cy = 0
+    var cx = 200
+    var cy = 200
     console.log(cx,cy);
     x = true
     y = true

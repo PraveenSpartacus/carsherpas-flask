@@ -246,6 +246,9 @@ def slider_upload():
 
 
 
+
+
+
 @app.route('/services')
 def services():
     return render_template('html-css-js/services.html')
@@ -257,7 +260,7 @@ def products():
 
 @app.route('/spotlight')
 def spotlight():
-    return render_template('html-css-js/spotlight.html')
+    return render_template('html-css-js/spotlight_2.html')
 
 @app.route('/studio')
 def studio():

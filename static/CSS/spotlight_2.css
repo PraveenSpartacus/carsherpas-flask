@@ -1,0 +1,33 @@
+.svg-container{
+    width: 100%;
+    height: 70%;
+    /* background-color: red; */
+    position: absolute;
+    bottom: 0;
+}
+
+.svg-container > svg{
+    width: 100%;
+    height: 100%;
+}
+
+.moving_circles{
+    transition: 2s cx linear, 0.5s cy linear;
+}
+
+#down_line, #down_line_2 {
+    animation: dash 500s linear infinite;
+}
+
+#up_line, #up_line_2{
+    animation: dash 500s linear reverse infinite;
+}
+
+@keyframes dash {
+    0%{
+        stroke-dashoffset: 0;
+    }
+    100%{
+        stroke-dashoffset: 100000;
+    }
+}

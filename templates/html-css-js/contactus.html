@@ -10,11 +10,11 @@
     <title>Document</title>
     <link rel="stylesheet" href="static/CSS/contactus.css">
     <link rel="stylesheet" href="static/Load/load.css">
-    
+    <link rel="stylesheet" href="../static/CSS/light-mode.css">
     <script src="static/JS/lottie.js"></script>
 </head>
 <script src="static/Load/load.js"></script>
-<body>
+<body class="light">
     <div id="load">
         <lottie-player id="player" src="static/Load/load-car.json"  background="transparent"  speed="1.5"   loop autoplay></lottie-player>
         <p>LOADING</p>
@@ -82,9 +82,11 @@
                 </div>
             </div>
             <div id="hamburger">
-                <img src="static/Assets/hamburger.svg" alt="">
+                <img class="darkmode-item" src="static/Assets/hamburger.svg" alt="">
+                <img class="lightmode-item" src="static/light-img/light-hamburger.svg" alt="">
             </div>
-            <img id="bottom-img" src="static/Assets/ContactUs/bottom-img.svg" alt="">
+            <img class="darkmode-img" id="bottom-img" src="static/Assets/ContactUs/bottom-img.svg" alt="">
+            <img class="lightmode-item" id="bottom-img" src="static/light-img/bottom-img.svg" alt="">
 
             <div id="content" class="">
                 <h1>Give us a call</h1>
@@ -103,4 +105,5 @@
     </div>
 </body>
 <script src="static/JS/sidebar.js"></script>
+<script src="../static/JS/switch-theme.js"></script>
 </html>

@@ -16,11 +16,13 @@
     <title>Home</title>
     <link rel="stylesheet" href="static/CSS/home.css">
     <link rel="stylesheet" href="static/Load/load.css">
+
+    <link rel="stylesheet" href="static/CSS/light-mode.css">
     
     <script src="static/JS/lottie.js"></script>
 </head>
 <script src="static/Load/load.js"></script>
-<body>
+<body class="light">
     <div id="load">
         <lottie-player id="player" src="static/Load/load-car.json"  background="transparent"  speed="1.5"   loop autoplay></lottie-player>
         <p>LOADING</p>
@@ -28,8 +30,10 @@
     <div id="page">
         <section id="hero" class="">
             <nav id="navbar">
+                <img src="static/Assets/Products/nav-bg.png" alt="">
                 <a class="nav-item" href="/">
-                    <img id="nav-logo" src="static/Assets/logo.svg" alt="">
+                    <img class="" id="nav-logo" src="static/Assets/logo.svg" alt="">
+                   
                 </a>
                 <div id="mid-nav">
                     <a class="nav-item" href="/spotlight">Spotlight</a>
@@ -38,9 +42,9 @@
                     <a class="nav-item" href="/studio">Studio</a>
                     <a class="nav-item" href="/news">News</a>
                 </div>
-                <a class="nav-item" href="/">
+                <div class="nav-item" onclick="modeToggle()">
                     <img id="nav-mode" src="static/Assets/sun.svg" alt="">
-                </a>
+                </div>
             </nav>
             <div id="sidebar-container">
                 <div id="sidebar">
@@ -88,7 +92,8 @@
                 </div>
             </div>
             <div id="hamburger">
-                <img src="static/Assets/hamburger.svg" alt="">
+                <img class="darkmode-item" src="static/Assets/hamburger.svg" alt="">
+                <img class="lightmode-item"  src="static/light-img/light-hamburger.svg" alt="">
             </div>
             <img id="grid" src="static/Assets/square-grid.png" alt="">
             <img src="static/Assets/y_cube.png" alt="" id="abs_cube">
@@ -216,11 +221,12 @@
             </filter>
             </defs>
             </svg>
-            <img src="static/Assets/Home/blob3dx.png" alt="">
+            <img class="darkmode-item" src="static/Assets/Home/blob3dx.png" alt="">
         </div>
         <img class="sm_pic" src="static/Assets/Home/social_media_illustration.svg" alt="">
         <section id="review-sec">
-            <img class="waves1" src="static/Assets/waves-1.svg" alt="">
+            <img class="darkmode-item waves1" src="static/Assets/waves-1.svg" alt="">
+            <img class="lightmode-item waves1" src="static/light-img/waves-1.svg" alt="">
             <div id="rev-title">
                 <h1>Don't take our word for it</h1>
                 <p>Trust our customers</p>
@@ -290,6 +296,7 @@
         
     </div>
 </body>
+<script src="static/JS/switch-theme.js"></script>
 <script src="static/JS/sidebar.js"></script>
 <script src="static/JS/home.js"></script>
 <script src="static/JS/increment.js"></script>

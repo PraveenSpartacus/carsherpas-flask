@@ -9,24 +9,16 @@
     <link rel="stylesheet" href="static/CSS/navbar.css">
     <title>Products</title>
     <link rel="stylesheet" href="static/CSS/products.css">
+    <link rel="stylesheet" href="static/CSS/light-mode.css">
 </head>
 <style>
-    #navbar > img{
-        width: 110%;
-        position: absolute;
-        z-index: -10;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        border-radius: 10px;
-    }
 </style>
 <link rel="stylesheet" href="static/Load/load.css">
     
     <script src="static/JS/lottie.js"></script>
 
 <script src="static/Load/load.js"></script>
-<body>
+<body class="light">
     <div id="load">
         <lottie-player id="player" src="static/Load/load-car.json"  background="transparent"  speed="1.5"   loop autoplay></lottie-player>
         <p>LOADING</p>
@@ -36,7 +28,8 @@
             <nav id="navbar">
                 <img src="static/Assets/Products/nav-bg.png" alt="">
                 <a class="nav-item" href="/">
-                    <img id="nav-logo" src="static/Assets/logo.svg" alt="">
+                    <img class="" id="nav-logo" src="static/Assets/logo.svg" alt="">
+                    
                 </a>
                 <div id="mid-nav">
                     <a class="nav-item" href="/spotlight">Spotlight</a>
@@ -45,9 +38,9 @@
                     <a class="nav-item" href="/studio">Studio</a>
                     <a class="nav-item" href="/news">News</a>
                 </div>
-                <a class="nav-item" href="/">
+                <div class="nav-item" onclick="modeToggle()">
                     <img id="nav-mode" src="static/Assets/sun.svg" alt="">
-                </a>
+                </div>
             </nav>
             <div id="sidebar-container">
                 <div id="sidebar">
@@ -95,7 +88,8 @@
                 </div>
             </div>
             <div id="hamburger">
-                <img src="static/Assets/hamburger.svg" alt="">
+                <img class="darkmode-item"  src="static/Assets/hamburger.svg" alt="">
+                <img class="lightmode-item"  src="static/light-img/light-hamburger.svg" alt="">
             </div>
             <img id="grid" src="static/Assets/square-grid.png" alt="">
             <!-- <img id="waves" src="static/Assets/Products/waves.svg" alt=""> -->
@@ -217,4 +211,5 @@
     </div>
 </body>
 <script src="static/JS/sidebar.js"></script>
+<script src="static/JS/switch-theme.js"></script>
 </html>

@@ -10,11 +10,11 @@
     <title>News</title>
     <link rel="stylesheet" href="static/CSS/news.css">
     <link rel="stylesheet" href="static/Load/load.css">
-    
+    <link rel="stylesheet" href="static/CSS/light-mode.css">
     <script src="static/JS/lottie.js"></script>
 </head>
 <script src="static/Load/load.js"></script>
-<body>
+<body class="light">
     <div id="load">
         <lottie-player id="player" src="static/Load/load-car.json"  background="transparent"  speed="1.5"   loop autoplay></lottie-player>
         <p>LOADING</p>
@@ -22,6 +22,7 @@
     <div id="page">
         <section id="hero">
             <nav id="navbar">
+                <img src="static/Assets/Products/nav-bg.png" alt="">
                 <a class="nav-item" href="/">
                     <img id="nav-logo" src="static/Assets/logo.svg" alt="">
                 </a>
@@ -82,7 +83,8 @@
                 </div>
             </div>
             <div id="hamburger">
-                <img src="static/Assets/hamburger.svg" alt="">
+                <img class="darkmode-item" src="static/Assets/hamburger.svg" alt="">
+                <img class="lightmode-item" src="static/light-img/light-hamburger.svg" alt="">
             </div>
             <h1 id="page-label">NEWS</h1>
             <div class="news-section">
@@ -109,7 +111,7 @@
             <div class="news-section">
                 <img id="waves2" src="static/Assets/News/waves2.svg" alt="">
                 {% if featured_articles|length > 0 %}
-                    <h1>All Articles</h1>
+                    <h1 class="">All Articles</h1>
                 {% else %}
                     <h1>No Articles</h1>
                 {% endif %}
@@ -134,4 +136,5 @@
     </div>
 </body>
 <script src="static/JS/sidebar.js"></script>
+<script src="static/JS/switch-theme.js"></script>
 </html>

@@ -36,9 +36,19 @@ border-color: #ffffff47;
     color: white;
 }
 
+.light *{
+    color: black;
+}
+
+
+
 
 body{
     background-color: black;
+}
+
+body.light{
+    background-color: #efefef;
 }
 #page{
     width: calc(100vw - calc(100vw - 100%));
@@ -61,6 +71,10 @@ body{
 #grid{
     height: 100%;
     width: auto;
+}
+
+.light #grid{
+    opacity: 0.2;
 }
 
 @media all and (orientation:landscape) {

@@ -10,11 +10,11 @@
     <title>Document</title>
     <link rel="stylesheet" href="static/CSS/studio.css">
     <link rel="stylesheet" href="static/Load/load.css">
-    
+    <link rel="stylesheet" href="static/CSS/light-mode.css">
     <script src="static/JS/lottie.js"></script>
 </head>
 <script src="static/Load/load.js"></script>
-<body>
+<body class="light">
     <div id="load">
         <lottie-player id="player" src="static/Load/load-car.json"  background="transparent"  speed="1.5"   loop autoplay></lottie-player>
         <p>LOADING</p>
@@ -22,6 +22,7 @@
     <div id="page">
         <section id="hero">
             <nav id="navbar">
+                <img src="static/Assets/Products/nav-bg.png" alt="">
                 <a class="nav-item" href="/">
                     <img id="nav-logo" src="static/Assets/logo.svg" alt="">
                 </a>
@@ -32,9 +33,9 @@
                     <a class="nav-item" href="/studio">Studio</a>
                     <a class="nav-item" href="/news">News</a>
                 </div>
-                <a class="nav-item" href="/">
+                <div class="nav-item" onclick="modeToggle()">
                     <img id="nav-mode" src="static/Assets/sun.svg" alt="">
-                </a>
+                </div>
             </nav>
             <div id="sidebar-container">
                 <div id="sidebar">
@@ -82,7 +83,8 @@
                 </div>
             </div>
             <div id="hamburger">
-                <img src="static/Assets/hamburger.svg" alt="">
+                <img class="darkmode-item" src="static/Assets/hamburger.svg" alt="">
+                <img class="lightmode-item"  src="static/light-img/light-hamburger.svg" alt="">
             </div>
             <img id="grid" src="static/Assets/square-grid.png" alt="">
             <div id="hero-container" class="">
@@ -98,9 +100,9 @@
             </div>
         </section>
         <div id="brand-sec" class="">
-            <img src="static/Assets/Studio/nissan.png" alt="">
-            <img src="static/Assets/Studio/bmw.png" alt="">
-            <img src="static/Assets/Studio/honda.png" alt="">
+            <img src="static/Assets/Studio/nissan.svg" alt="">
+            <img src="static/Assets/Studio/bmw.svg" alt="">
+            <img src="static/Assets/Studio/honda.svg" alt="">
         </div>
 
 
@@ -124,7 +126,8 @@
 
 
 
-    <img class="waves" src="static/Assets/waves-1.svg" alt="" >
+    <img class="darkmode-item waves" src="static/Assets/waves-1.svg" alt="">
+    <img class="lightmode-item waves" src="static/light-img/waves-1.svg" alt="">
 
     <h1 id="achievements-heading">
         Our Achievements
@@ -187,4 +190,5 @@
 </body>
 <script src="static/JS/sidebar.js"></script>
 <script src="static/JS/studio.js"></script>
+<script src="static/JS/switch-theme.js"></script>
 </html>

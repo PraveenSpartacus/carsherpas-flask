@@ -32,6 +32,11 @@
     background-image: linear-gradient(to right, black , white, black);
 }
 
+
+.light #sharp-line{
+    background-image: linear-gradient(to right, rgb(255, 255, 255) , rgb(0, 0, 0), rgb(255, 255, 255));
+}
+
 #marquee-clone{
     width: 50em;
     height: 8em;
@@ -115,6 +120,10 @@
     border-bottom: 2px solid #191919;
 }
 
+.light #incrementSec{
+    border-bottom: 2px solid #c2c2c2;
+}
+
 .incrementUnit > h2{
     text-align: center;
     margin-bottom: 0.7em;
@@ -194,6 +203,10 @@
     border: 3px solid white;
     padding: 0.8em 3em;
     margin: 2em 0 5em 0;
+}
+
+.light #wait-sec > a{
+    border: 3px solid rgb(0, 0, 0);
 }
 
 

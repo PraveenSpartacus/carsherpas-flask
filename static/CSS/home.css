@@ -68,6 +68,10 @@
     border-bottom: 2px solid #191919;
 }
 
+.light #incrementSec{
+    border-color: #d4d4d4;;
+}
+
 .incrementUnit > h2{
     text-align: center;
     margin-bottom: 0.7em;
@@ -134,23 +138,40 @@
     stroke: #282828;
     transition: all 0.5s linear;
 }
+
+.light #Line_2_x{
+    stroke: #d6d6d6;
+}
 .highlight#Line_2_x{
     stroke: #282828;
     animation: curve-animation 0.4s 1  linear;
     stroke-dashoffset: 1350px;
     stroke-dasharray: 1350px;
 }
+
+.light .highlight#Line_2_x{
+    stroke: #d6d6d6;
+}
 #Line_2{
     stroke: #282828;
 }
+.light #Line_2{
+    stroke: #d6d6d6;
+}
 #Line_3_x{
     transition: stroke-dashoffset 0.5s linear;
+}
+.light #Line_3_x{
+    stroke: #d6d6d6;
 }
 .highlight#Line_3_x{
     stroke: #0055D6;
     animation: curve-animation 0.4s 1 reverse forwards linear;
     stroke-dasharray: 1350px;
 }
+
+
+
 @keyframes curve-animation {
     0%{
         stroke-dashoffset: 0px;
@@ -175,6 +196,10 @@
     fill: #CBCBCB;
     opacity: 0.4;
 }
+
+.light .sub-text{
+    fill: #1f1f1f;
+}
 #review-sec{
     width: 100%;
     display: flex;
@@ -184,6 +209,15 @@
     font-family: 'Montserrat', sans-serif;
     position: relative;
 }
+
+.light #review-sec  h1{
+    color: black;
+}
+
+.light #review-sec  p{
+    color: rgb(89, 89, 89);
+}
+
 .waves1{
     width: 100%;
     position: absolute;
@@ -257,6 +291,10 @@
     z-index: 10;
 }
 
+.light .backdrop{
+    background: rgba(190, 188, 255, 0.5);
+}
+
 .rev-1{
     position: absolute;
     left: 50%;
@@ -319,6 +357,10 @@
     width: 100%;
     height: 50%;
     overflow-y: scroll;
+}
+
+.light .rev-body{
+    color: rgb(49, 49, 49);
 }
 
 #grp-2 circle,#grp-3 circle,#grp-2 text,#grp-3 text{

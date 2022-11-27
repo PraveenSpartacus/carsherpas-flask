@@ -28,6 +28,10 @@ body{
     z-index: -10;
 }
 
+.light #page-label{
+    color: #E0E0E0;
+}
+
 .news-section{
     width: 85%;
     height: fit-content;
@@ -55,6 +59,8 @@ body{
     text-align: center;
 }
 
+
+
 .news-cards-container{
     width: 100%;
     height: fit-content;
@@ -73,6 +79,10 @@ body{
     display: flex;
     margin: 4em 2em;
     text-decoration: none;
+}
+
+.light .news-card{
+    background: #ffffff;
 }
 
 .n_right{
@@ -106,12 +116,19 @@ body{
     margin-top: 5%;
 }
 
+.light .article-title{
+    color: black;
+}
+
 .article-description{
     color: #626262;
     font-size: 1.5em;
     font-size: 500;
     margin-top: 5%;
     line-height: 1.5em;
+    /* background-color: #0B0B0B; */
+    height: 50%;
+    overflow-y: scroll;
 }
 
 @media screen and (min-width: 0px){

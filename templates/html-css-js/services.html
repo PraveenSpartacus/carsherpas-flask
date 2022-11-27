@@ -9,12 +9,13 @@
     <link rel="stylesheet" href="static/CSS/navbar.css">
     <title>Services</title>
     <link rel="stylesheet" href="static/CSS/services.css">
+    <link rel="stylesheet" href="static/CSS/light-mode.css">
     <!-- <link rel="stylesheet" href="static/Load/load.css">
     
     <script src="static/JS/lottie.js"></script> -->
 </head>
 <!-- <script src="static/Load/load.js"></script> -->
-<body>
+<body class="light">
     <!-- <div id="load">
         <lottie-player id="player" src="static/Load/load-car.json"  background="transparent"  speed="1.5"   loop autoplay></lottie-player>
         <p>LOADING</p>
@@ -22,6 +23,7 @@
     <div id="page">
         <section id="hero">
             <nav id="navbar">
+                <img src="static/Assets/Products/nav-bg.png" alt="">
                 <a class="nav-item" href="/">
                     <img id="nav-logo" src="static/Assets/logo.svg" alt="">
                 </a>
@@ -32,9 +34,9 @@
                     <a class="nav-item" href="/studio">Studio</a>
                     <a class="nav-item" href="/news">News</a>
                 </div>
-                <a class="nav-item" href="/">
+                <div class="nav-item" onclick="modeToggle()">
                     <img id="nav-mode" src="static/Assets/sun.svg" alt="">
-                </a>
+                </div>
             </nav>
             <div id="sidebar-container">
                 <div id="sidebar">
@@ -82,12 +84,13 @@
                 </div>
             </div>
             <div id="hamburger">
-                <img src="static/Assets/hamburger.svg" alt="">
+                <img class="darkmode-item" src="static/Assets/hamburger.svg" alt="">
+                <img class="lightmode-item"  src="static/light-img/light-hamburger.svg" alt="">
             </div>
             <img id="grid" src="static/Assets/square-grid.png" alt="">
             <img src="static/Assets/" alt="">
-            <img id="blob-1" src="static/Assets/Services/blob-1.png" alt="">
-            <img id="blob-2" src="static/Assets/Services/blob-2.png" alt="">
+            <img class="darkmode-item" id="blob-1" src="static/Assets/Services/blob-1.png" alt="">
+            <img class="darkmode-item" id="blob-2" src="static/Assets/Services/blob-2.png" alt="">
             <div id="blur"></div>
             <div id="main-content">
                 <h1>OUR ARENA</h1>
@@ -185,7 +188,8 @@
             </div>
         </div>
 
-        <img id="waves" src="static/Assets/waves-1.svg" alt="">
+        <img class="darkmode-item" id="waves" src="static/Assets/waves-1.svg" alt="">
+        <img class="lightmode-item" id="waves" src="static/light-img/waves-1.svg" alt="">
 
         <div id="wait-sec">
             <h1>What are you waiting for?</h1>
@@ -195,4 +199,5 @@
 </body>
 <script src="static/JS/sidebar.js"></script>
 <script src="static/JS/increment.js"></script>
+<script src="static/JS/switch-theme.js"></script>
 </html>

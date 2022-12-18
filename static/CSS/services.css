@@ -38,9 +38,9 @@
 }
 
 #marquee-clone{
-    width: 50em;
+    width: fit-content;
     height: 8em;
-    overflow: hidden;
+    /* overflow: hidden; */
     display: flex;
     justify-content: flex-start;
     border-radius: 50%;
@@ -98,14 +98,14 @@
     max-width: 400px;
 }
 
-@keyframes marquee {
+/* @keyframes marquee {
     0%{
         margin-left: 0;
     }
     100%{
         margin-left: -72em;
     }
-}
+} */
 
 
 #incrementSec{

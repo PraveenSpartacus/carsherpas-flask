@@ -4,6 +4,16 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+function redirect(url){
+    window.open(url, '_blank');
+}
+
+
+document.getElementById('contact_btn_group').addEventListener("click", (e) => {
+    url = 'https://square.link/u/mzNe9NrZ';
+    redirect(url);
+})
+
 
 
 function hello(){
@@ -52,4 +62,4 @@ function hello(){
 }
 
 
-hello()
+hello();

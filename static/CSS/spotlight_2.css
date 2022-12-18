@@ -31,3 +31,17 @@
         stroke-dashoffset: 100000;
     }
 }
+
+
+
+text{
+  
+    font-size: 40px;
+    fill: black;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#contact_btn_group{
+    cursor: pointer;
+    fill: #ffffff00;
+}

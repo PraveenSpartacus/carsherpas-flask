@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    <h1>Studio Image Upload</h1> <br>
+    <form enctype="multipart/form-data" action="" method="POST">
+        <div class="form-group">
+        <input class="form-control" type=file name="img1" accept="image/png, image/gif, image/jpeg" required>
+        </div> <br>
+        <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+
+    
+    
+
+    
+{% endblock %}

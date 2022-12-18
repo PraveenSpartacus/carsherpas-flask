@@ -4,6 +4,7 @@ from wtforms import Form, StringField, TextAreaField, PasswordField, validators
 from functools import wraps
 from flask_uploads import UploadSet, configure_uploads, IMAGES
 import os
+import json
 
 app = Flask(__name__)
 app.secret_key = "super secret key"
@@ -11,6 +12,7 @@ app.secret_key = "super secret key"
 photos = UploadSet('photos', IMAGES)
  
 app.config['UPLOADED_PHOTOS_DEST'] = 'static/img/'
+app.config['JSON'] = 'static/JSON/main.json'
 configure_uploads(app, photos)
  
 @app.route('/upload', methods=['GET', 'POST'])
@@ -22,6 +24,7 @@ def upload():
     return render_template('upload.html')
 
 # Config MySQL
+
 # app.config['MYSQL_HOST'] = 'localhost'
 # app.config['MYSQL_USER'] = 'root'
 # app.config['MYSQL_PASSWORD'] = 'password'
@@ -273,8 +276,17 @@ def studio():
 
     print(images[0])
 
+    hero_img = ''
+    achievements = []
+    with open(app.config['JSON']) as json_file:
+        JSON = json.load(json_file)
+        hero_img = JSON["studio-image"]
+        achievements = JSON["achievements"]
+        hero_img_path = app.config['UPLOADED_PHOTOS_DEST'] + hero_img
+    
+    
 
-    return render_template('html-css-js/studio.html', images=images)
+    return render_template('html-css-js/studio.html', images=images, hero_img_path = hero_img_path, achievements = achievements)
 
 @app.route('/news')
 def news():
@@ -344,7 +356,57 @@ def review_upload():
         return render_template('message.html', message="Review is uploaded successfully", danger=False)
     return render_template('review-upload.html')
 
+@app.route('/upload-studio-img', methods=['POST','GET'])
+@is_logged_in
+def uploadStudioImg():
+    if request.method == 'POST':
+        # os.remove(os.path.join(app.config['UPLOADED_PHOTOS_DEST']))
+        json_file = open(app.config['JSON'],"r+")
+        JSON = json.load(json_file)
+        json_file.close()
+        print(JSON)
+        # return JSON
+        fname = JSON["studio-image"]
+        os.remove(os.path.join(app.config['UPLOADED_PHOTOS_DEST'], fname))
+        
+        img1 = photos.save(request.files['img1'], name="sm.")
+        JSON["studio-image"] = img1
+
+        dumps_obj = json.dumps(JSON, indent=4)
+
+        
+
+        with open(app.config['JSON'],"w") as json_file:
+            json_file.write(dumps_obj)
 
 
+        return render_template('message.html', message="Image Successfully Uploaded", danger=False)
+
+    return render_template('upload-studio-img.html')
+
+
+@app.route('/upload-achievements', methods=['POST','GET'])
+@is_logged_in
+def upload_achievements():
+    if request.method == "POST":
+        json_file = open(app.config['JSON'],"r+")
+        JSON = json.load(json_file)
+        json_file.close()
+
+        achievements = [[request.form['head_1'],request.form['sub_1']],[request.form['head_2'],request.form['sub_2']],[request.form['head_3'],request.form['sub_3']]]
+        JSON["achievements"] = achievements
+
+        json_dumps = json.dumps(JSON, indent=4)
+        with open(app.config['JSON'], 'w') as json_file:
+            json_file.write(json_dumps)
+        
+        return render_template('message.html', message="Achievements Successfully Uploaded", danger=False)
+
+    json_file = open(app.config['JSON'],"r+")
+    JSON = json.load(json_file)
+    json_file.close()
+
+    achievements = JSON["achievements"]
+    return render_template('upload_achievements.html', achievements = achievements)
 if __name__ == '__main__':
     app.run(debug=True)

@@ -15,7 +15,7 @@
 
 #ani-heading{
     font-family: 'Montserrat', sans-serif;
-    font-weight: 100;
+    font-weight: 600;
     font-size: 50px; 
     width: 100%;
     text-align: center;
@@ -66,6 +66,7 @@
     padding-bottom: 50px;
     /* border-top: 2px solid #242424; */
     border-bottom: 2px solid #191919;
+    margin-top: -200px;
 }
 
 .light #incrementSec{

@@ -1,0 +1,34 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    <h1>Slider Upload</h1> <br>
+    <form enctype="multipart/form-data" action="" method="POST">
+          <div class="form-group">
+            <label for="">Achievement-1</label>
+            <input name="head_1" style="font-size: 30px;font-weight: 800;" value="{{achievements[0][0]}}" class="form-control" type="text">
+            <br>
+            <input name="sub_1" class="form-control" value="{{achievements[0][1]}}" type="text">
+          </div>
+          <br>  <br>
+          <div class="form-group">
+            <label for="">Achievement-2</label>
+            <input name="head_2" style="font-size: 30px;font-weight: 800;" value="{{achievements[1][0]}}" class="form-control" type="text">
+            <br>
+            <input name="sub_2" class="form-control" value="{{achievements[1][1]}}" type="text">
+          </div>
+          <br><br>
+          <div class="form-group">
+            <label for="">Achievement-3</label>
+            <input name="head_3" style="font-size: 30px;font-weight: 800;" value="{{achievements[2][0]}}" class="form-control" type="text">
+            <br>
+            <input name="sub_3" class="form-control" value="{{achievements[2][1]}}" type="text">
+          </div>
+          <br>
+        <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+
+    
+    
+
+    
+{% endblock %}

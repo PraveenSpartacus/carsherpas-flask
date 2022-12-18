@@ -41,6 +41,15 @@
     height: 100%; */
 }
 
+#lottie-container > img{
+    /* width: 100%; */
+    height: 100%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+}
+
 .lottie-player{
     position: absolute;
     /* width: 150%; */

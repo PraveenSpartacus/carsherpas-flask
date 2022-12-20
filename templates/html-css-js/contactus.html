@@ -32,8 +32,9 @@
                     <a class="nav-item" href="/services">Services</a>
                     <a class="nav-item" href="/studio">Studio</a>
                     <a class="nav-item" href="/news">News</a>
+                    <a class="nav-item" href="/contactus">Contact</a>
                 </div>
-                <a class="nav-item" href="/">
+                <a class="nav-item" onclick="modeToggle()">
                     <img id="nav-mode" src="static/Assets/sun.svg" alt="">
                 </a>
             </nav>
@@ -93,13 +94,13 @@
                 <h1>Give us a call</h1>
                 <div class="line">
                     <img src="static/Assets/ContactUs/mail-img.svg" alt="">
-                    <p>abc@gmail.com</p>
-                    <img src="static/Assets/ContactUs/copy-icon.svg" alt="">
+                    <p>Nick@CarSherpas.com</p>
+                    <img onclick="copyEmail()" src="static/Assets/ContactUs/copy-icon.svg" alt="">
                 </div>
                 <div class="line">
                     <img src="static/Assets/ContactUs/phone-img.svg" alt="">
-                    <p>3648309212</p>
-                    <img src="static/Assets/ContactUs/copy-icon.svg" alt="">
+                    <p>1-800-674-9521</p>
+                    <img onclick="copyPhone()" src="static/Assets/ContactUs/copy-icon.svg" alt="">
                 </div>
             </div>
         </section>
@@ -107,4 +108,9 @@
 </body>
 <script src="static/JS/sidebar.js"></script>
 <script src="../static/JS/switch-theme.js"></script>
+<script>
+    function copyEmail(){
+        
+    }
+</script>
 </html>

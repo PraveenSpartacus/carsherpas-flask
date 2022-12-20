@@ -6,6 +6,10 @@
     bottom: 0;
 }
 
+.svg-mobile{
+    height: 100%;
+}
+
 .svg-container > svg{
     width: 100%;
     height: 100%;
@@ -35,7 +39,6 @@
 
 
 text{
-  
     font-size: 40px;
     fill: black;
     font-family: 'Montserrat', sans-serif;
@@ -45,3 +48,97 @@ text{
     cursor: pointer;
     fill: #ffffff00;
 }
+
+text.impressions{
+    font-size: 80px;
+    font-weight: 900;
+}
+
+.car_icon{
+    position: relative;
+    transform: translateX(20px);
+}
+
+/* .for_just{
+    transform: translateX();
+} */
+
+.for_just > tspan{
+    font-weight: 700;
+}
+.svg-landscape{
+    display: block;
+}
+.svg-mobile{
+    display: none;
+}
+@media screen and (orientation:portrait) {
+    .svg-landscape{
+        display: none;
+    }
+    .svg-mobile{
+        display: block;
+    }
+}
+
+.impressions2{
+    font-size: 160px;
+    font-weight: 900;
+}
+
+.for_just_2{
+    font-size: 70px;
+}
+
+.for_just_2 > tspan{
+    font-weight: 700;
+}
+
+.light .svg-container *{
+    fill: black;
+}
+
+.svg-container *{
+    fill: white;
+}
+
+.light .svg-container rect{
+    fill: none;
+}
+
+ .svg-container rect{
+    fill: none;
+}
+
+.light .svg-container .mask_circle{
+    fill: white;
+}
+
+.svg-container .mask_circle{
+    fill: black;
+}
+
+.light .svg-container .lines{
+    stroke: black;
+}
+
+.svg-container .lines{
+    stroke: white;
+}
+
+.light #contact_btn_group > rect{
+    stroke: black;
+}
+
+#contact_btn_group > rect{
+    stroke: white;
+}
+
+.light #contact_btn_group_mob > rect{
+    stroke: black;
+}
+
+#contact_btn_group_mob > rect{
+    stroke: white;
+}
+

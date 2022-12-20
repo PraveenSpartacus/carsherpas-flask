@@ -9,13 +9,13 @@
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-/* background: red; */
-border: rgba(255, 255, 255, 0.171) 2px solid;
+background: #0400ff;
+border: #0400ff8a 2px solid;
 border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover{
-border-color: #ffffff47;
+border-color: #0400ff47;
 }
 
 

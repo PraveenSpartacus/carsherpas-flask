@@ -10,19 +10,26 @@ function redirect(url){
 
 
 document.getElementById('contact_btn_group').addEventListener("click", (e) => {
-    url = 'https://square.link/u/mzNe9NrZ';
-    redirect(url);
-})
+    redirect(buy_url);
+});
+
+document.getElementById('contact_btn_group_mob').addEventListener("click", (e) => {
+    redirect(buy_url);
+});
 
 
 
-function hello(){
+function animateCircle(){
     var circles = [...document.getElementsByClassName("moving_circles")];
     console.log(circles)
 
-    WIDTH = 1920;
-    HEIGHT = 789;
-
+    SVGArray = document.querySelectorAll(".svg-container > svg")
+    // console.log(SVG.getAttribute('width'))
+    SVG = [...SVGArray].find((svg)=>getComputedStyle(svg.parentElement).getPropertyValue('display') != 'none');
+    // SVG = SVGArray[1]
+    WIDTH = parseInt(SVG.getAttribute('width'));
+    HEIGHT = parseInt(SVG.getAttribute('height'));
+    console.log(WIDTH, HEIGHT)
     circles.forEach(element => {
         element.setAttribute('cx','200');
         element.setAttribute('cy','200');
@@ -41,6 +48,11 @@ function hello(){
             element.setAttribute('cx',cx.toString());
             element.setAttribute('cy',cy.toString());
         });
+
+        SVG = [...SVGArray].find((svg)=>getComputedStyle(svg.parentElement).getPropertyValue('display') != 'none');
+        // SVG = SVGArray[1]
+        WIDTH = parseInt(SVG.getAttribute('width'));
+        HEIGHT = parseInt(SVG.getAttribute('height'));
 
         // if(x)
         //     cx++;
@@ -62,4 +74,4 @@ function hello(){
 }
 
 
-hello();
+animateCircle();

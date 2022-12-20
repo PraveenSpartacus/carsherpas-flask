@@ -25,17 +25,17 @@ def upload():
 
 # Config MySQL
 
-# app.config['MYSQL_HOST'] = 'localhost'
-# app.config['MYSQL_USER'] = 'root'
-# app.config['MYSQL_PASSWORD'] = 'password'
-# app.config['MYSQL_DB'] = 'sample_db'
-# app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
-
-app.config['MYSQL_HOST'] = 'flasksample.mysql.pythonanywhere-services.com'
-app.config['MYSQL_USER'] = 'flasksample'
-app.config['MYSQL_PASSWORD'] = 'entertheNEWDRAGON@007'
-app.config['MYSQL_DB'] = 'flasksample$sample'
+app.config['MYSQL_HOST'] = 'localhost'
+app.config['MYSQL_USER'] = 'root'
+app.config['MYSQL_PASSWORD'] = 'password'
+app.config['MYSQL_DB'] = 'sample_db'
 app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
+
+# app.config['MYSQL_HOST'] = 'flasksample.mysql.pythonanywhere-services.com'
+# app.config['MYSQL_USER'] = 'flasksample'
+# app.config['MYSQL_PASSWORD'] = 'entertheNEWDRAGON@007'
+# app.config['MYSQL_DB'] = 'flasksample$sample'
+# app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
 # init MYSQL
 mysql = MySQL(app)
 
@@ -44,6 +44,16 @@ mysql = MySQL(app)
 
 # Articles = Articles()
 
+def getJSON():
+    json_file = open(app.config['JSON'],"r+")
+    JSON = json.load(json_file)
+    json_file.close()
+    return JSON
+
+def writeJSON(JSON):
+    json_dumps = json.dumps(JSON, indent=4)
+    with open(app.config['JSON'], 'w') as json_file:
+        json_file.write(json_dumps)
 
 
 @app.route('/articles')
@@ -263,7 +273,10 @@ def products():
 
 @app.route('/spotlight')
 def spotlight():
-    return render_template('html-css-js/spotlight_2.html')
+    JSON = getJSON()
+    content = JSON["spotlight-content"]
+    contentList = [ content['impressions'], content['featured'], content['cost'], content['buy_link'] ]
+    return render_template('html-css-js/spotlight_2.html', content=contentList)
 
 @app.route('/studio')
 def studio():
@@ -385,6 +398,8 @@ def uploadStudioImg():
     return render_template('upload-studio-img.html')
 
 
+
+
 @app.route('/upload-achievements', methods=['POST','GET'])
 @is_logged_in
 def upload_achievements():
@@ -408,5 +423,27 @@ def upload_achievements():
 
     achievements = JSON["achievements"]
     return render_template('upload_achievements.html', achievements = achievements)
+
+
+@app.route('/spotlight-content-upload', methods=["GET", "POST"])
+def spotlight_content():
+    if request.method == "POST":
+        impressions = request.form['impressions']
+        featured = request.form['featured']
+        cost = request.form['cost']
+        buy_link = request.form['buy_link']
+        
+        JSON = getJSON()
+        JSON['spotlight-content']['impressions'] = impressions
+        JSON['spotlight-content']['featured'] = featured
+        JSON['spotlight-content']['cost'] = cost
+        JSON['spotlight-content']['buy_link'] = buy_link
+        writeJSON(JSON)
+        return render_template('message.html', message="Spolight Content Successfully Uploaded", danger=False)
+    JSON = getJSON()
+    content = JSON["spotlight-content"]
+    contentList = [content["impressions"],content["featured"],content["cost"], content["buy_link"]]
+    return render_template("spotlight-content-upload.html", content=contentList)
+
 if __name__ == '__main__':
     app.run(debug=True)

@@ -32,8 +32,9 @@
                     <a class="nav-item" href="/services">Services</a>
                     <a class="nav-item" href="/studio">Studio</a>
                     <a class="nav-item" href="/news">News</a>
+                    <a class="nav-item" href="/contactus">Contact</a>
                 </div>
-                <a class="nav-item" href="/">
+                <a class="nav-item" onclick="modeToggle()">
                     <img id="nav-mode" src="static/Assets/sun.svg" alt="">
                 </a>
             </nav>
@@ -110,8 +111,9 @@
             </div>
             <div class="news-section">
                 <img id="waves2" src="static/Assets/News/waves2.svg" alt="">
+                <div class="black_space"></div>
                 {% if featured_articles|length > 0 %}
-                    <h1 class="">All Articles</h1>
+                    <h1 style="color:white">All Articles</h1>
                 {% else %}
                     <h1>No Articles</h1>
                 {% endif %}

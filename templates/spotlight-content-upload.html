@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    <h1>Splotlight Content Upload</h1> <br>
+    <form enctype="multipart/form-data" action="" method="POST">
+        <div class="form-group">
+            <label for="">Impressions</label>
+            <input name="impressions" type="text" class="form-control" value="{{content[0]}}">
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="">Featured</label>
+            <input name="featured" type="text" class="form-control" value="{{content[1]}}">
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="">Cost</label>
+            <input name="cost" type="text" class="form-control" value="{{content[2]}}">
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="">Buy Link</label>
+            <input style="color: blue;" name="buy_link" type="text" class="form-control" value="{{content[3]}}">
+        </div>
+        <br>
+        <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+
+    
+    
+
+    
+{% endblock %}

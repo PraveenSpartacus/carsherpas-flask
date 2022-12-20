@@ -38,6 +38,7 @@ body{
     margin: 40em auto 0 auto;
     font-size: 10px;
     position: relative;
+    z-index: 10;
 }
 
 #waves2{
@@ -57,6 +58,8 @@ body{
     font-style: normal;
     width: 100%;
     text-align: center;
+    z-index: 10;
+    position: relative;
 }
 
 
@@ -69,6 +72,7 @@ body{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    z-index: 10;
 }
 
 .news-card{
@@ -79,6 +83,7 @@ body{
     display: flex;
     margin: 4em 2em;
     text-decoration: none;
+    z-index: 10;
 }
 
 .light .news-card{
@@ -127,9 +132,19 @@ body{
     margin-top: 5%;
     line-height: 1.5em;
     /* background-color: #0B0B0B; */
-    height: 50%;
+    height: 35%;
     overflow-y: scroll;
 }
+
+.article-description::-webkit-scrollbar {
+    width: 4px;
+}
+
+.article-description::-webkit-scrollbar-thumb {
+    background: #0400ff9c;
+    border: #0400ff8a 2px solid;
+    border-radius: 10px;
+    }
 
 @media screen and (min-width: 0px){
     #page-label{
@@ -195,5 +210,22 @@ body{
 @media screen and (min-width: 1600px){
     .news-section{
         font-size: 6.2px;
+    }
+}
+
+.black_space{
+    background-color: black;
+    height: 100%;
+    width: 117.64%;
+    position: absolute;
+    z-index: 1;
+    top: 200px;
+    left: 50%;
+    transform: translate(-50%,0);
+}
+
+@media screen and (orientation: portrait){
+    .black_space{
+        top: 100px;
     }
 }

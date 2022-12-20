@@ -1,8 +1,13 @@
 var isLightMode = true;
 
-// if(localStorage.getItem('isLightMode') == 'false')
-//     isLightMode = false;
+if(localStorage.getItem('isLightMode') == 'false'){
+    isLightMode = false;
+    document.body.classList.remove('light')
+}
+else
+    document.body.classList.add('light')
 
+console.log('Light Mode - ',localStorage.getItem('isLightMode'))
 
 
 
@@ -10,6 +15,7 @@ function modeToggle(){
     document.body.classList.toggle('light');
     isLightMode = !isLightMode;
     localStorage.setItem('isLightMode',isLightMode);
+    console.log("After Setting, Light mode - ",localStorage.getItem('isLightMode'))
     unshow_items(isLightMode)
     show_items(isLightMode)
 }

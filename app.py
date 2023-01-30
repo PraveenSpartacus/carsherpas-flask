@@ -15,7 +15,7 @@ app.secret_key = "super secret key"
 photos = UploadSet('photos', IMAGES)
 
 app.config['TEMPLATES_AUTO_RELOAD'] = True
- 
+app.config['MAX_CONTENT_LENGTH'] = 1024 
 app.config['UPLOADED_PHOTOS_DEST'] = 'static/img/'
 app.config['UPLOADED_VIDEOS_DEST'] = 'static/videos/'
 app.config['JSON'] = 'static/JSON/main.json'

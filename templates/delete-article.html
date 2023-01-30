@@ -2,6 +2,7 @@
 
 {% block body %}
     <h1>Delete Articles</h1>
+    {{session}}
     <br>
     <!-- <ul>
     {% for article in articles %}
@@ -38,7 +39,7 @@
             <td>{{article.date}}</td>
             <td><a class="text-decoration-none" href="/article/{{article.id}}">View Article</a></td>
             <td>
-              <form action="/delete-article/{{article.id}}" method="post">
+              <form action="/delete-article/{{article.id}}" method="POST">
                 <input type="hidden" name="_method" value="DELETE">
                 <input type="submit" value="Delete" class="btn btn-danger">
               </form>

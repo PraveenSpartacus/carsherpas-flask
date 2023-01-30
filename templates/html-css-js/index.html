@@ -1,15 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+
+    <!-- clearing cache before loading -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+
+    <!-- end -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="CarShaerpas is a digital first advertising platform born in a dealership and molded by technology">
+    <meta property="og:title"
+        content="CarShaerpas is a digital first advertising platform born in a dealership and molded by technology">
     <meta property="og:description" content="Are you a car dealer? What are you waiting for? Join Us!">
     <meta property="og:type" content="article">
     <meta property="og:url" content="carsherpas.com">
     <meta property="og:image" content="https://carsherpas-html-css.netlify.app/Assets/logo.png">
-<meta name="twitter:image" content="https://carsherpas-html-css.netlify.app/Assets/logo.png">
+    <meta name="twitter:image" content="https://carsherpas-html-css.netlify.app/Assets/logo.png">
+    <link rel="shortcut icon" type="image/x-icon" href="/static/Assets/favicon.ico">
     <link rel="stylesheet" href="static/CSS/base.css">
     <link rel="stylesheet" href="static/CSS/sidebar.css">
     <link rel="stylesheet" href="static/CSS/navbar.css">
@@ -18,13 +28,16 @@
     <link rel="stylesheet" href="static/Load/load.css">
 
     <link rel="stylesheet" href="static/CSS/light-mode.css">
-    
+{% include 'html-css-js/clear-cache.html' %}
     <script src="static/JS/lottie.js"></script>
 </head>
+
 <script src="static/Load/load.js"></script>
+
 <body class="light">
     <div id="load">
-        <lottie-player id="player" src="static/Load/load-car.json"  background="transparent"  speed="1.5"   loop autoplay></lottie-player>
+        <lottie-player id="player" src="static/Load/load-car.json" background="transparent" speed="1.5" loop autoplay>
+        </lottie-player>
         <p>LOADING</p>
     </div>
     <div id="page">
@@ -33,16 +46,9 @@
                 <img src="static/Assets/Products/nav-bg.png" alt="">
                 <a class="nav-item" href="/">
                     <img class="" id="nav-logo" src="static/Assets/logo.svg" alt="">
-                   
+
                 </a>
-                <div id="mid-nav">
-                    <a class="nav-item" href="/spotlight">Spotlight</a>
-                    <a class="nav-item" href="/products">Products</a>
-                    <a class="nav-item" href="/services">Services</a>
-                    <a class="nav-item" href="/studio">Studio</a>
-                    <a class="nav-item" href="/news">News</a>
-                    <a class="nav-item" href="/contactus">Contact</a>
-                </div>
+                {% include 'html-css-js/mid-nav.html' %}
                 <div class="nav-item" onclick="modeToggle()">
                     <img id="nav-mode" src="static/Assets/sun.svg" alt="">
                 </div>
@@ -94,7 +100,7 @@
             </div>
             <div id="hamburger">
                 <img class="darkmode-item" src="static/Assets/hamburger.svg" alt="">
-                <img class="lightmode-item"  src="static/light-img/light-hamburger.svg" alt="">
+                <img class="lightmode-item" src="static/light-img/light-hamburger.svg" alt="">
             </div>
             <img id="grid" src="static/Assets/square-grid.png" alt="">
             <!-- <img src="static/Assets/y_cube.png" alt="" id="abs_cube">
@@ -102,9 +108,9 @@
             <img src="static/Assets/sparkle_2.png" alt="" id="abs_sparkle_2">
             <img src="static/Assets/b_ring.png" alt="" id="abs_ring"> -->
             <h1 id="mainTitle">
-                CarSherpas is a digital first advertising firm born in a dealership and molded by technology.
+                CarSherpas is a marketing and lead generation platform for car dealerships.
             </h1>
-           
+
         </section>
         <section id="incrementSec">
             <div class="incrementUnit">
@@ -120,107 +126,133 @@
                 <p>Appointments</p>
             </div>
         </section>
+        <section class="hero-video">
+
+            <video poster="static/videos/{{videosJSON['video-1']['poster']}}" src="{{fun()}}" width="60%;"
+                preload="none" controls></video>
+        </section>
         <h2 id="ani-heading">Cut Through the Noise</h2>
-        <div id="svg-container"> 
-            <svg width="1920" height="3261" viewBox="0 0 1920 3261" fill="none"  xmlns="http://www.w3.org/2000/svg">
-            <g id="Slide 16:9 - 9">
-            <g id="Group 15">
-            <path class="curve_path" id="Line_1" d="M439.5 1397C439.5 867.932 1462.75 1325 1462.75 779.568" stroke-width="11"/>
-            
-            <path class="curve_path" id="Line_2" d="M440.999 1868.5C440.146 2398.94 1485.02 1939.05 1484.14 2485.9" stroke="#282828" stroke-width="11"/>
-            
-            <g >
-            
-            
-            <g class="grp" id="grp-1">
-                <circle id="Ellipse 2" cx="1463" cy="543" r="233.5"  stroke-width="7" stroke-dasharray="20 20"/>
-            <g id="1" filter="url(#filter0_d_75_215)">
-            <path class="digit" d="M1492.26 439.527V639H1452.88V484.918L1405.58 499.957V468.922L1488.02 439.527H1492.26Z" fill="white"/>
-            </g>
-                
-                <text class="sub-text" x="00" y="550">Locate/Qualify in market shoppers by</text>
-                <text class="sub-text" x="0" y="630" >using their real-time behavioral data.</text>
-                <text class="sub-text" x="200" y="690" ></text>
-                
-            </g>
-            
-            </g>
-            <g>
-                <path class="curve_path x_line" id="Line_3_x" d="M440.999 1868.5C440.146 2398.94 1485.02 1939.05 1484.14 2485.9" stroke="#282828" stroke-width="11"/>
-            
-            <g class="grp" id="grp-3">
-                <circle id="Ellipse 2_2" cx="1484" cy="2718" r="233.5"  stroke-width="7" stroke-dasharray="20 20"/>
-            <g id="3" filter="url(#filter1_d_75_215)">
-            <path d="M1457.61 2697.38H1478.67C1485.41 2697.38 1490.97 2696.24 1495.35 2693.96C1499.72 2691.59 1502.96 2688.31 1505.05 2684.12C1507.24 2679.83 1508.34 2674.87 1508.34 2669.21C1508.34 2664.11 1507.33 2659.6 1505.33 2655.68C1503.41 2651.67 1500.45 2648.57 1496.44 2646.38C1492.43 2644.1 1487.37 2642.96 1481.27 2642.96C1476.43 2642.96 1471.97 2643.92 1467.87 2645.84C1463.77 2647.75 1460.48 2650.44 1458.02 2653.9C1455.56 2657.37 1454.33 2661.56 1454.33 2666.48H1414.82C1414.82 2655.54 1417.74 2646.02 1423.57 2637.91C1429.49 2629.79 1437.42 2623.46 1447.36 2618.9C1457.29 2614.35 1468.23 2612.07 1480.17 2612.07C1493.66 2612.07 1505.46 2614.25 1515.58 2618.63C1525.7 2622.91 1533.58 2629.25 1539.23 2637.63C1544.89 2646.02 1547.71 2656.41 1547.71 2668.8C1547.71 2675.09 1546.25 2681.2 1543.34 2687.12C1540.42 2692.96 1536.23 2698.24 1530.76 2702.98C1525.38 2707.63 1518.82 2711.37 1511.07 2714.2C1503.32 2716.93 1494.62 2718.3 1484.96 2718.3H1457.61V2697.38ZM1457.61 2727.32V2706.95H1484.96C1495.8 2706.95 1505.33 2708.18 1513.53 2710.64C1521.73 2713.1 1528.62 2716.66 1534.18 2721.3C1539.74 2725.86 1543.93 2731.29 1546.75 2737.57C1549.58 2743.77 1550.99 2750.65 1550.99 2758.22C1550.99 2767.52 1549.21 2775.81 1545.66 2783.1C1542.11 2790.3 1537.09 2796.41 1530.62 2801.42C1524.24 2806.43 1516.77 2810.26 1508.2 2812.91C1499.63 2815.46 1490.29 2816.73 1480.17 2816.73C1471.79 2816.73 1463.54 2815.6 1455.43 2813.32C1447.4 2810.95 1440.11 2807.44 1433.55 2802.79C1427.08 2798.05 1421.88 2792.12 1417.96 2785.02C1414.14 2777.82 1412.22 2769.29 1412.22 2759.45H1451.73C1451.73 2764.55 1453.01 2769.11 1455.56 2773.12C1458.11 2777.13 1461.62 2780.28 1466.09 2782.55C1470.65 2784.83 1475.71 2785.97 1481.27 2785.97C1487.55 2785.97 1492.93 2784.83 1497.4 2782.55C1501.96 2780.18 1505.42 2776.9 1507.79 2772.71C1510.25 2768.43 1511.48 2763.46 1511.48 2757.81C1511.48 2750.52 1510.16 2744.68 1507.52 2740.31C1504.87 2735.84 1501.09 2732.56 1496.17 2730.46C1491.25 2728.37 1485.41 2727.32 1478.67 2727.32H1457.61Z" fill="white"/>
-            </g>
-                
-            
-            <text class="sub-text" x="0" y="2655">We turn shoppers into buyers by </text>
-            <text class="sub-text" x="0" y="2735" >putting your unique inventory in the </text>
-            <text class="sub-text" x="0" y="2815" >
-                palm of their hands
-            </text>
-            </g>
+        <div id="svg-container">
+            <svg width="1920" height="3261" viewBox="0 0 1920 3261" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="Slide 16:9 - 9">
+                    <g id="Group 15">
+                        <path class="curve_path" id="Line_1" d="M439.5 1397C439.5 867.932 1462.75 1325 1462.75 779.568"
+                            stroke-width="11" />
 
-            
-            
-            
-            <g >
-                <path class="curve_path x_line" id="Line_2_x" d="M439.5 1397C439.5 867.932 1462.75 1325 1462.75 779.568" stroke-width="11"/>
-            <g id="Group 12">
-            <g id="Group 14">
-            
-            </g>
-            </g>
+                        <path class="curve_path" id="Line_2"
+                            d="M440.999 1868.5C440.146 2398.94 1485.02 1939.05 1484.14 2485.9" stroke="#282828"
+                            stroke-width="11" />
 
-            <g class="grp" id="grp-2">
-                <circle id="Ellipse 2_3" cx="441" cy="1632" r="233.5"  stroke-width="7" stroke-dasharray="20 20"/>
-            <g id="2" filter="url(#filter2_d_75_215)">
-            <path d="M510.453 1697.24V1728H374.281V1701.75L438.676 1632.71C445.147 1625.51 450.251 1619.17 453.988 1613.7C457.725 1608.14 460.414 1603.18 462.055 1598.8C463.786 1594.33 464.652 1590.1 464.652 1586.09C464.652 1580.07 463.65 1574.92 461.645 1570.64C459.639 1566.26 456.677 1562.89 452.758 1560.52C448.93 1558.15 444.19 1556.96 438.539 1556.96C432.523 1556.96 427.328 1558.42 422.953 1561.34C418.669 1564.26 415.388 1568.31 413.109 1573.51C410.922 1578.7 409.828 1584.58 409.828 1591.14H370.316C370.316 1579.3 373.142 1568.45 378.793 1558.61C384.444 1548.67 392.419 1540.79 402.719 1534.95C413.018 1529.03 425.232 1526.07 439.359 1526.07C453.305 1526.07 465.062 1528.35 474.633 1532.9C484.294 1537.37 491.586 1543.84 496.508 1552.32C501.521 1560.7 504.027 1570.73 504.027 1582.39C504.027 1588.96 502.979 1595.38 500.883 1601.67C498.786 1607.87 495.779 1614.07 491.859 1620.27C488.031 1626.37 483.383 1632.57 477.914 1638.86C472.445 1645.15 466.384 1651.67 459.73 1658.41L425.141 1697.24H510.453Z" fill="white"/>
-            </g>
-                
-                <text class="sub-text" x="820" y="1620">We design a personalized algorithm</text>
-                <text class="sub-text" x="820" y="1700" >based on your current inventory</text>
-                <text class="sub-text" x="820" y="1760" ></text>
-            </g>
-            
-            
-            
-            </g>
-            </g>
-            </g>
-            <defs>
-            <filter id="filter0_d_75_215" x="1305.58" y="339.527" width="286.68" height="399.473" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-            <feOffset/>
-            <feGaussianBlur stdDeviation="50"/>
-            <feComposite in2="hardAlpha" operator="out"/>
-            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0"/>
-            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_75_215"/>
-            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_75_215" result="shape"/>
-            </filter>
-            <filter id="filter1_d_75_215" x="1312.22" y="2512.07" width="338.77" height="404.668" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-            <feOffset/>
-            <feGaussianBlur stdDeviation="50"/>
-            <feComposite in2="hardAlpha" operator="out"/>
-            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0"/>
-            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_75_215"/>
-            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_75_215" result="shape"/>
-            </filter>
-            <filter id="filter2_d_75_215" x="270.316" y="1426.07" width="340.137" height="401.934" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-            <feOffset/>
-            <feGaussianBlur stdDeviation="50"/>
-            <feComposite in2="hardAlpha" operator="out"/>
-            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0"/>
-            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_75_215"/>
-            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_75_215" result="shape"/>
-            </filter>
-            </defs>
+                        <g>
+
+
+                            <g class="grp" id="grp-1">
+                                <circle id="Ellipse 2" cx="1463" cy="543" r="233.5" stroke-width="7"
+                                    stroke-dasharray="20 20" />
+                                <g id="1" filter="url(#filter0_d_75_215)">
+                                    <path class="digit"
+                                        d="M1492.26 439.527V639H1452.88V484.918L1405.58 499.957V468.922L1488.02 439.527H1492.26Z"
+                                        fill="white" />
+                                </g>
+
+                                <text class="sub-text" x="00" y="550">Locate/Qualify in market shoppers by</text>
+                                <text class="sub-text" x="0" y="630">using their real-time behavioral data.</text>
+                                <text class="sub-text" x="200" y="690"></text>
+
+                            </g>
+
+                        </g>
+                        <g>
+                            <path class="curve_path x_line" id="Line_3_x"
+                                d="M440.999 1868.5C440.146 2398.94 1485.02 1939.05 1484.14 2485.9" stroke="#282828"
+                                stroke-width="11" />
+
+                            <g class="grp" id="grp-3">
+                                <circle id="Ellipse 2_2" cx="1484" cy="2718" r="233.5" stroke-width="7"
+                                    stroke-dasharray="20 20" />
+                                <g id="3" filter="url(#filter1_d_75_215)">
+                                    <path
+                                        d="M1457.61 2697.38H1478.67C1485.41 2697.38 1490.97 2696.24 1495.35 2693.96C1499.72 2691.59 1502.96 2688.31 1505.05 2684.12C1507.24 2679.83 1508.34 2674.87 1508.34 2669.21C1508.34 2664.11 1507.33 2659.6 1505.33 2655.68C1503.41 2651.67 1500.45 2648.57 1496.44 2646.38C1492.43 2644.1 1487.37 2642.96 1481.27 2642.96C1476.43 2642.96 1471.97 2643.92 1467.87 2645.84C1463.77 2647.75 1460.48 2650.44 1458.02 2653.9C1455.56 2657.37 1454.33 2661.56 1454.33 2666.48H1414.82C1414.82 2655.54 1417.74 2646.02 1423.57 2637.91C1429.49 2629.79 1437.42 2623.46 1447.36 2618.9C1457.29 2614.35 1468.23 2612.07 1480.17 2612.07C1493.66 2612.07 1505.46 2614.25 1515.58 2618.63C1525.7 2622.91 1533.58 2629.25 1539.23 2637.63C1544.89 2646.02 1547.71 2656.41 1547.71 2668.8C1547.71 2675.09 1546.25 2681.2 1543.34 2687.12C1540.42 2692.96 1536.23 2698.24 1530.76 2702.98C1525.38 2707.63 1518.82 2711.37 1511.07 2714.2C1503.32 2716.93 1494.62 2718.3 1484.96 2718.3H1457.61V2697.38ZM1457.61 2727.32V2706.95H1484.96C1495.8 2706.95 1505.33 2708.18 1513.53 2710.64C1521.73 2713.1 1528.62 2716.66 1534.18 2721.3C1539.74 2725.86 1543.93 2731.29 1546.75 2737.57C1549.58 2743.77 1550.99 2750.65 1550.99 2758.22C1550.99 2767.52 1549.21 2775.81 1545.66 2783.1C1542.11 2790.3 1537.09 2796.41 1530.62 2801.42C1524.24 2806.43 1516.77 2810.26 1508.2 2812.91C1499.63 2815.46 1490.29 2816.73 1480.17 2816.73C1471.79 2816.73 1463.54 2815.6 1455.43 2813.32C1447.4 2810.95 1440.11 2807.44 1433.55 2802.79C1427.08 2798.05 1421.88 2792.12 1417.96 2785.02C1414.14 2777.82 1412.22 2769.29 1412.22 2759.45H1451.73C1451.73 2764.55 1453.01 2769.11 1455.56 2773.12C1458.11 2777.13 1461.62 2780.28 1466.09 2782.55C1470.65 2784.83 1475.71 2785.97 1481.27 2785.97C1487.55 2785.97 1492.93 2784.83 1497.4 2782.55C1501.96 2780.18 1505.42 2776.9 1507.79 2772.71C1510.25 2768.43 1511.48 2763.46 1511.48 2757.81C1511.48 2750.52 1510.16 2744.68 1507.52 2740.31C1504.87 2735.84 1501.09 2732.56 1496.17 2730.46C1491.25 2728.37 1485.41 2727.32 1478.67 2727.32H1457.61Z"
+                                        fill="white" />
+                                </g>
+
+
+                                <text class="sub-text" x="0" y="2655">We turn shoppers into buyers by </text>
+                                <text class="sub-text" x="0" y="2735">putting your unique inventory in the </text>
+                                <text class="sub-text" x="0" y="2815">
+                                    palm of their hands
+                                </text>
+                            </g>
+
+
+
+
+                            <g>
+                                <path class="curve_path x_line" id="Line_2_x"
+                                    d="M439.5 1397C439.5 867.932 1462.75 1325 1462.75 779.568" stroke-width="11" />
+                                <g id="Group 12">
+                                    <g id="Group 14">
+
+                                    </g>
+                                </g>
+
+                                <g class="grp" id="grp-2">
+                                    <circle id="Ellipse 2_3" cx="441" cy="1632" r="233.5" stroke-width="7"
+                                        stroke-dasharray="20 20" />
+                                    <g id="2" filter="url(#filter2_d_75_215)">
+                                        <path
+                                            d="M510.453 1697.24V1728H374.281V1701.75L438.676 1632.71C445.147 1625.51 450.251 1619.17 453.988 1613.7C457.725 1608.14 460.414 1603.18 462.055 1598.8C463.786 1594.33 464.652 1590.1 464.652 1586.09C464.652 1580.07 463.65 1574.92 461.645 1570.64C459.639 1566.26 456.677 1562.89 452.758 1560.52C448.93 1558.15 444.19 1556.96 438.539 1556.96C432.523 1556.96 427.328 1558.42 422.953 1561.34C418.669 1564.26 415.388 1568.31 413.109 1573.51C410.922 1578.7 409.828 1584.58 409.828 1591.14H370.316C370.316 1579.3 373.142 1568.45 378.793 1558.61C384.444 1548.67 392.419 1540.79 402.719 1534.95C413.018 1529.03 425.232 1526.07 439.359 1526.07C453.305 1526.07 465.062 1528.35 474.633 1532.9C484.294 1537.37 491.586 1543.84 496.508 1552.32C501.521 1560.7 504.027 1570.73 504.027 1582.39C504.027 1588.96 502.979 1595.38 500.883 1601.67C498.786 1607.87 495.779 1614.07 491.859 1620.27C488.031 1626.37 483.383 1632.57 477.914 1638.86C472.445 1645.15 466.384 1651.67 459.73 1658.41L425.141 1697.24H510.453Z"
+                                            fill="white" />
+                                    </g>
+
+                                    <text class="sub-text" x="820" y="1620">We design a personalized algorithm</text>
+                                    <text class="sub-text" x="820" y="1700">based on your current inventory</text>
+                                    <text class="sub-text" x="820" y="1760"></text>
+                                </g>
+
+
+
+                            </g>
+                        </g>
+                    </g>
+                    <defs>
+                        <filter id="filter0_d_75_215" x="1305.58" y="339.527" width="286.68" height="399.473"
+                            filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                            <feColorMatrix in="SourceAlpha" type="matrix"
+                                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                            <feOffset />
+                            <feGaussianBlur stdDeviation="50" />
+                            <feComposite in2="hardAlpha" operator="out" />
+                            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0" />
+                            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_75_215" />
+                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_75_215" result="shape" />
+                        </filter>
+                        <filter id="filter1_d_75_215" x="1312.22" y="2512.07" width="338.77" height="404.668"
+                            filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                            <feColorMatrix in="SourceAlpha" type="matrix"
+                                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                            <feOffset />
+                            <feGaussianBlur stdDeviation="50" />
+                            <feComposite in2="hardAlpha" operator="out" />
+                            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0" />
+                            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_75_215" />
+                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_75_215" result="shape" />
+                        </filter>
+                        <filter id="filter2_d_75_215" x="270.316" y="1426.07" width="340.137" height="401.934"
+                            filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                            <feColorMatrix in="SourceAlpha" type="matrix"
+                                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                            <feOffset />
+                            <feGaussianBlur stdDeviation="50" />
+                            <feComposite in2="hardAlpha" operator="out" />
+                            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0" />
+                            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_75_215" />
+                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_75_215" result="shape" />
+                        </filter>
+                    </defs>
             </svg>
             <img class="darkmode-item" src="static/Assets/Home/blob3dx.png" alt="">
         </div>
@@ -230,75 +262,76 @@
             <img class="lightmode-item waves1" src="static/light-img/waves-1.svg" alt="">
             <div id="rev-title">
                 <h1>Don't take our word for it</h1>
-                <p>Trust our customers</p>
+                <p>Trust our customers{{fun()}}</p>
             </div>
             <!-- <img id="rev-img" src="static/Assets/reviews.png" alt=""> -->
-            
-                    <div class="reviews-container  ">
-                        <img id="blur_img" src="static/Assets/Home/blur_circle.svg" alt="">
-        
-                        <div class="rev rev-1" >
-                            <div class="backdrop"></div>
-                            <div class="rev-content ">
-                                <div class="rev-avatar ">
-                                    <img src="static/img/{{review1['photoName']}}" alt="">
-                                </div>
-                                <div class="rev-name">
-                                    {{review1['name']}}
-                                </div>
-                                <div class="rev-occupation">
-                                    {{review1['designation']}}
-                                </div>
-                                <div class="rev-body ">
-                                    {{review1['reviewBody']}}
-                                </div>
-                            </div>
+
+            <div class="reviews-container  ">
+                <img id="blur_img" src="static/Assets/Home/blur_circle.svg" alt="">
+
+                <div class="rev rev-1">
+                    <div class="backdrop"></div>
+                    <div class="rev-content ">
+                        <div class="rev-avatar ">
+                            <img src="static/img/{{review1['photoName']}}" alt="">
                         </div>
-        
-                        <div class="rev rev-2" >
-                            <div class="backdrop"></div>
-                            <div class="rev-content ">
-                                <div class="rev-avatar ">
-                                    <img src="static/img/{{review2['photoName']}}" alt="">
-                                </div>
-                                <div class="rev-name">
-                                    {{review2['name']}}
-                                </div>
-                                <div class="rev-occupation">
-                                    {{review2['designation']}}
-                                </div>
-                                <div class="rev-body ">
-                                    {{review2['reviewBody']}}
-                                </div>
-                            </div>
+                        <div class="rev-name">
+                            {{review1['name']}}
                         </div>
-        
-                        <div class="rev rev-3" >
-                            <div class="backdrop"></div>
-                            <div class="rev-content ">
-                                <div class="rev-avatar ">
-                                    <img src="static/img/{{review3['photoName']}}" alt="">
-                                </div>
-                                <div class="rev-name">
-                                    {{review3['name']}}
-                                </div>
-                                <div class="rev-occupation">
-                                    {{review3['designation']}}
-                                </div>
-                                <div class="rev-body ">
-                                    {{review3['reviewBody']}}
-                                </div>
-                            </div>
+                        <div class="rev-occupation">
+                            {{review1['designation']}}
+                        </div>
+                        <div class="rev-body ">
+                            {{review1['reviewBody']}}
                         </div>
                     </div>
-               
+                </div>
+
+                <div class="rev rev-2">
+                    <div class="backdrop"></div>
+                    <div class="rev-content ">
+                        <div class="rev-avatar ">
+                            <img src="static/img/{{review2['photoName']}}" alt="">
+                        </div>
+                        <div class="rev-name">
+                            {{review2['name']}}
+                        </div>
+                        <div class="rev-occupation">
+                            {{review2['designation']}}
+                        </div>
+                        <div class="rev-body ">
+                            {{review2['reviewBody']}}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rev rev-3">
+                    <div class="backdrop"></div>
+                    <div class="rev-content ">
+                        <div class="rev-avatar ">
+                            <img src="static/img/{{review3['photoName']}}" alt="">
+                        </div>
+                        <div class="rev-name">
+                            {{review3['name']}}
+                        </div>
+                        <div class="rev-occupation">
+                            {{review3['designation']}}
+                        </div>
+                        <div class="rev-body ">
+                            {{review3['reviewBody']}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </section>
 
-        
+
     </div>
 </body>
 <script src="static/JS/switch-theme.js"></script>
 <script src="static/JS/sidebar.js"></script>
 <script src="static/JS/home.js"></script>
 <script src="static/JS/increment.js"></script>
+
 </html>

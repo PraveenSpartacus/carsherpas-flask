@@ -1,5 +1,7 @@
 const hamburger = document.getElementById("hamburger");
 
+
+
 hamburger.onclick = () => {
     document.getElementById("hero").classList.add("sidebar-activate");
     document.body.classList.add('side-bar-activate-body');

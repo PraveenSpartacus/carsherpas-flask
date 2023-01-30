@@ -27,14 +27,7 @@
                 <a class="nav-item" href="/">
                     <img id="nav-logo" src="static/Assets/logo.svg" alt="">
                 </a>
-                <div id="mid-nav">
-                    <a class="nav-item" href="/spotlight">Spotlight</a>
-                    <a class="nav-item" href="/products">Products</a>
-                    <a class="nav-item" href="/services">Services</a>
-                    <a class="nav-item" href="/studio">Studio</a>
-                    <a class="nav-item" href="/news">News</a>
-                    <a class="nav-item" href="/contactus">Contact</a>
-                </div>
+                {% include 'html-css-js/mid-nav.html' %}
                 <div class="nav-item" onclick="modeToggle()">
                     <img id="nav-mode" src="static/Assets/sun.svg" alt="">
                 </div>
@@ -171,21 +164,61 @@
 
         <div class="mobile-design ">
             <div class="left">
-                <h1>Automated Assistant</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                <h1>{{content[0]['head']}}</h1>
+                <p>{{content[0]['body']}}</p>
             </div>
             <div class="right">
-                <img src="static/Assets/Services/mob-1.png" alt="">
+                <img src="static/img/{{content[0]['img']}}" alt="">
             </div>
         </div>
 
         <div class="mobile-design d1">
             <div class="left">
-                <h1>Personalised Ads</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                <h1>{{content[1]['head']}}</h1>
+                <p>{{content[1]['body']}}</p>
             </div>
             <div class="right">
-                <img src="static/Assets/Services/mob-2.png" alt="">
+                <img src="static/img/{{content[1]['img']}}" alt="">
+            </div>
+        </div>
+
+        <div class="mobile-design ">
+            <div class="left">
+                <h1>{{content[2]['head']}}</h1>
+                <p>{{content[2]['body']}}</p>
+            </div>
+            <div class="right">
+                <img src="static/img/{{content[2]['img']}}" alt="">
+            </div>
+        </div>
+
+        <div class="mobile-design d1">
+            <div class="left">
+                <h1>{{content[3]['head']}}</h1>
+                <p>{{content[3]['body']}}</p>
+            </div>
+            <div class="right">
+                <img src="static/img/{{content[3]['img']}}" alt="">
+            </div>
+        </div>
+
+        <div class="mobile-design">
+            <div class="left">
+                <h1>{{content[4]['head']}}</h1>
+                <p>{{content[4]['body']}}</p>
+            </div>
+            <div class="right">
+                <img src="static/img/{{content[4]['img']}}" alt="">
+            </div>
+        </div>
+
+        <div class="mobile-design d1">
+            <div class="left">
+                <h1>{{content[5]['head']}}</h1>
+                <p>{{content[5]['body']}}</p>
+            </div>
+            <div class="right">
+                <img src="static/img/{{content[5]['img']}}" alt="">
             </div>
         </div>
 

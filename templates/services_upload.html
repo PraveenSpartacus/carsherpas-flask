@@ -1,0 +1,87 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    <style>
+        .s-head{
+            font-size: 30px;
+            font-weight: 800;
+        }
+    </style>
+    <h1>Services Upload</h1> <br>
+    <form enctype="multipart/form-data" action="" method="POST">
+        
+        <div class="form-group">
+            <label for="">Service-1</label>
+            <input value="{{content[0]['head']}}"  name="s1-head" type="text" class="form-control s-head">
+            <br>
+            <input value="{{content[0]['body']}}" name="s1-body" type="text" class="form-control">
+            <br>
+            <input class="form-control" type=file name=photo1 accept="image/png, image/gif, image/jpeg" required> 
+        </div>
+        <br>
+        <hr>
+        <br>
+        <div class="form-group">
+            <label for="">Service-2</label>
+            <input value="{{content[1]['head']}}" name="s2-head" type="text" class="form-control s-head">
+            <br>
+            <input value="{{content[1]['body']}}" name="s2-body" type="text" class="form-control">
+            <br>
+            <input class="form-control" type=file name=photo2 accept="image/png, image/gif, image/jpeg" required> 
+        </div>
+        <br>
+        <hr>
+        <br>
+        <div class="form-group">
+            <label for="">Service-3</label>
+            <input value="{{content[2]['head']}}"  name="s3-head" type="text" class="form-control s-head">
+            <br>
+            <input value="{{content[2]['body']}}" name="s3-body" type="text" class="form-control">
+            <br>
+            <input class="form-control" type=file name=photo3 accept="image/png, image/gif, image/jpeg" required> 
+        </div>
+        <br>
+        <hr>
+        <br>
+        <div class="form-group">
+            <label for="">Service-4</label>
+            <input value="{{content[3]['head']}}"  name="s4-head" type="text" class="form-control s-head">
+            <br>
+            <input value="{{content[3]['body']}}" name="s4-body" type="text" class="form-control">
+            <br>
+            <input class="form-control" type=file name=photo4 accept="image/png, image/gif, image/jpeg" required> 
+        </div>
+        <br>
+        <hr>
+        <br>
+        <div class="form-group">
+            <label for="">Service-5</label>
+            <input value="{{content[4]['head']}}"  name="s5-head" type="text" class="form-control s-head">
+            <br>
+            <input value="{{content[4]['body']}}" name="s5-body" type="text" class="form-control">
+            <br>
+            <input class="form-control" type=file name=photo5 accept="image/png, image/gif, image/jpeg" required> 
+        </div>
+        <br>
+        <hr>
+        <br>
+        <div class="form-group">
+            <label for="">Service-6</label>
+            <input value="{{content[5]['head']}}" name="s6-head" type="text" class="form-control s-head">
+            <br>
+            <input value="{{content[5]['body']}}" name="s6-body" type="text" class="form-control">
+            <br>
+            <input class="form-control" type=file name=photo6 accept="image/png, image/gif, image/jpeg" required> 
+        </div>
+        <br>
+        <hr>
+        <br>
+        <button class="btn btn-primary" type="submit">Submit</button>
+        <br>
+    </form>
+
+    <br>
+    
+
+    
+{% endblock %}

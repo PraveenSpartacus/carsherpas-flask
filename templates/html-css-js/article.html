@@ -10,14 +10,14 @@
     <title>News</title>
     <link rel="stylesheet" href="../static/CSS/article.css">
     <link rel="stylesheet" href="../static/CSS/light-mode.css">
-    <!-- <link rel="stylesheet" href="static/Load/load.css">
+    <!-- <link rel="stylesheet" href="../static/Load/load.css"> -->
     
-    <script src="static/JS/lottie.js"></script> -->
+    <!-- <script src="../static/JS/lottie.js"></script> -->
 </head>
-<!-- <script src="static/Load/load.js"></script> -->
+<!-- <script src="../static/Load/load.js"></script> -->
 <body class="light">
     <!-- <div id="load">
-        <lottie-player id="player" src="static/Load/load-car.json"  background="transparent"  speed="1.5"   loop autoplay></lottie-player>
+        <lottie-player id="player" src="../static/Load/load-car.json"  background="transparent"  speed="1.5"   loop autoplay></lottie-player>
         <p>LOADING</p>
     </div> -->
     <div id="page">
@@ -27,14 +27,7 @@
                 <a class="nav-item" href="/">
                     <img id="nav-logo" src="../static/Assets/logo.svg" alt="">
                 </a>
-                <div id="mid-nav">
-                    <a class="nav-item" href="/spotlight">Spotlight</a>
-                    <a class="nav-item" href="/products">Products</a>
-                    <a class="nav-item" href="/services">Services</a>
-                    <a class="nav-item" href="/studio">Studio</a>
-                    <a class="nav-item" href="/news">News</a>
-                    <a class="nav-item" href="/contactus">Contact</a>
-                </div>
+                {% include 'html-css-js/mid-nav.html' %}
                 <a class="nav-item" onclick="modeToggle()">
                     <img id="nav-mode" src="../static/Assets/sun.svg" alt="">
                 </a>

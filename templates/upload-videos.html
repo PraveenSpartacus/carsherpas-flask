@@ -1,0 +1,111 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+    <style>
+        .none{
+            display: none;
+        }
+
+        #video_title input{
+            font-size: 25px;
+        }
+    </style>
+
+    <h1>Upload Videos</h1> <br>
+    <form enctype="multipart/form-data" action="" method="POST">
+
+        <div class="form-group">
+            <label for="">Select Video Location</label>
+            <select class="form-select" id="video_number" name="video_number">
+                <option value="video-1">Video in Home Page</option>
+                <option value="video-2">Video-1 in Spotlight Page</option>
+                <option value="video-3">Video-2 in Spotlight Page</option>
+                <option value="video-4">Video-3 in Spotlight Page</option>
+                <option value="video-5">Video-4 in Spotlight Page</option>
+            </select>
+            <br>
+        </div>
+        
+
+        <div class="form-group none" id="video_title">
+            <label for="">Video Title</label>
+            <input class="form-control" type="text" name="video_title" required>
+            <br>
+        </div> 
+
+        
+
+        <div class="form-group none" id="video_description">
+            <label for="">Video Description</label>
+            <input class="form-control" type="text" name="video_description" required>
+            <br>
+        </div> 
+
+        <div class="form-group">
+            <label for="">Video Poster Image (16:9)</label>
+            <input class="form-control" type=file name="video_poster" accept="image/jpeg, image/png, img/jpg" required>
+            <br>
+        </div>
+
+        <div class="form-group">
+            <label for="">Video Upload (16:9)</label>
+        <input class="form-control" type=file name="video" accept="video/mp4" required>
+        <br>
+        </div> 
+
+        <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+
+    
+    <script>
+        var videoInfo = `{{videosJSON|tojson}}`;
+        videoJSON = JSON.parse(videoInfo);
+
+        var title = document.getElementById('video_title');
+        var description = document.getElementById('video_description');
+        title.querySelector('input').disabled = true;
+        description.querySelector('input').disabled = true;
+        document.getElementById('video_number').onchange = (e) => {
+            value = e.target.value;
+            
+            if(value == "video-3" || value == "video-4"){
+                console.log("video-3 or 4 selected")
+                title.querySelector('input').disabled = false;
+                title.classList.remove("none");
+                description.querySelector('input').disabled = false;
+                description.classList.remove('none');
+                console.log(videoJSON)
+                if(value == "video-3"){
+                    title.querySelector('input').value = videoJSON['video-3']['title']
+                    description.querySelector('input').value = videoJSON['video-3']['description']
+                }
+                else{
+                    title.querySelector('input').value = videoJSON['video-4']['title']
+                    description.querySelector('input').value = videoJSON['video-4']['description']
+                }
+            
+            }
+            else if(value == "video-1"){
+                title.classList.add("none");
+                title.querySelector('input').disabled = true;
+            }
+            else{
+                console.log("video-2 or 5 is selected")
+                title.querySelector('input').disabled = false;
+                title.classList.remove('none');
+                description.querySelector('input').disabled = true;
+                description.classList.add('none');
+                if(value == "video-2")
+                title.querySelector('input').value = videoJSON['video-2']['title']
+                else
+                title.querySelector('input').value = videoJSON['video-5']['title']
+            }
+        }
+
+        
+
+    </script>
+
+    
+{% endblock %}

@@ -1,0 +1,34 @@
+{
+    "services": [
+        {
+            "head": "Lead generation",
+            "body": "Our technology uses targeted advertising campaigns and proprietary chatbot technology to connect with active buyers and showcase a dealership's full inventory. Our predictive algorithms can present potential customers with a selection of 10 cars from the dealership's inventory that they are likely to be interested in, even if they weren't actively searching for a car at the time. This helps generate qualified leads and streamline the sales process.",
+            "img": "s.png"
+        },
+        {
+            "head": "CPC advertising",
+            "body": "We offer cost-per-click (CPC) advertising services that showcase a dealership's inventory based on a user's interests and web history. Our dynamic inventory ads are designed to capture the attention of potential buyers and prompt them to visit a dealership's website and submit their information.",
+            "img": "s_1.png"
+        },
+        {
+            "head": "Inventory ads",
+            "body": "Our dynamic inventory ads showcase a dealership's full inventory to potential buyers based on their interests and web history.",
+            "img": "s_2.png"
+        },
+        {
+            "head": "24/7 A.I. Chatbot",
+            "body": "CarSherpas is proud to offer our innovative 24/7 AI chatbot for car dealerships. Our chatbot is designed to connect with potential buyers and provide them with the information they need to make an informed decision about their next car purchase. Whether they're browsing your website late at night or early in the morning, our chatbot is always available to answer their questions and guide them through the process, and convert them into a lead.",
+            "img": "s_3.png"
+        },
+        {
+            "head": "Graphics",
+            "body": "We handle all graphics for our clients at no additional charge, ensuring that their marketing materials are professional and effective.",
+            "img": "s_8.png"
+        },
+        {
+            "head": "Video streaming",
+            "body": "We offer video streaming services to help dealerships showcase their inventory and connect with potential buyers through live or pre-recorded video content. This can be especially useful for virtual events or for providing virtual test drives.",
+            "img": "s_9.png"
+        }
+    ]
+}

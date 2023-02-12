@@ -6,24 +6,24 @@
     },
     "video-2": {
         "name": "video-2",
-        "title": "Video-1 Title",
-        "poster": "video-2.jpg"
+        "title": "CarSherpas: Product Demo",
+        "poster": "video-2.png"
     },
     "video-3": {
         "name": "video-3",
-        "title": "Video-2 in Title",
-        "description": "Video-2 Description**",
+        "title": "Streaming Commercials",
+        "description": "Sample of streaming commercials",
         "poster": "video-3.png"
     },
     "video-4": {
         "name": "video-4",
-        "title": "Video-3 Title",
-        "description": "Video-3 Description***",
-        "poster": "video-4.jpg"
+        "title": "Streaming Commercials",
+        "description": "Streaming Commercials Sample.",
+        "poster": "video-4.png"
     },
     "video-5": {
         "name": "video-5",
-        "title": "Video-4 Title New",
-        "poster": "video-5.jpg"
+        "title": "Streaming Commercials",
+        "poster": "video-5.png"
     }
 }

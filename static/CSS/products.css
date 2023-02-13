@@ -76,7 +76,7 @@
     width: 8em;
     height: 8em;
     border-radius: 50%;
-    background-color: #3600A9;
+    background-color: #5982c2;
     display: flex;
     top: calc(100% - 4em);
     left: calc(50% - 4em);
@@ -87,7 +87,7 @@
 }
 
 .light .choose-plan-btn{
-    background-color: #4c00ef;
+    background-color: #5982c1;
 }
 
 .choose-plan-btn > img{
@@ -128,6 +128,11 @@
 
 .light #better-sec > a{
     border-color: #000;
+}
+
+.main_product{
+    border: 2px solid #5982c2;
+    transform: scale(1.2);
 }
 
 

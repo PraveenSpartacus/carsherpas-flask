@@ -3,13 +3,12 @@
 #mainTitle{
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: 27%;
     transform: translate(-50%, -50%);
     text-align: center;
-    font-size: 20px;
     letter-spacing: 2%;
     line-height: 26.1px;
-    width: 93%;
+    width: 100%;
     font-family: Lunema;
 }
 
@@ -91,7 +90,18 @@
     display:flex;
     align-items: center;
     justify-content: center;
-    margin:3rem 0;
+    /* margin:3rem 0; */
+    position: absolute;
+    top: 35%;
+    /* max-width: 820px; */
+    /* max-height: 50%; */
+    height: 50%;
+}
+
+.hero-video > video{
+    height: 100%;
+    width: auto;
+    max-width: 100%;
 }
 /* main Animation CSS */
 
@@ -236,7 +246,7 @@
     font-size: 20px;
     font-weight: 900;
     text-align: center;
-    margin-top: 35vw;
+    /* margin-top: 35vw; */
     color: #cfcfcf;
 }
 #review-sec  p{
@@ -391,6 +401,9 @@
     .reviews-container{
         font-size: 4px;
     }
+    .hero-video{
+        height: 45%;
+    }
 }
 
 @media screen and (min-width: 480px) {
@@ -404,7 +417,7 @@
         top: 30%;
     }
     #mainTitle{
-        font-size: 25px;
+        font-size: 17px;
         line-height: 29px;
     }
     #incrementSec{
@@ -438,7 +451,7 @@
         bottom: 30%;
     }
     #mainTitle{
-        font-size: 30px;
+        font-size: 20px;
         line-height: 35px;
     }
     #incrementSec{
@@ -456,6 +469,9 @@
     .reviews-container{
         font-size: 6.7px;
     }
+    .hero-video{
+        height: 45%;
+    }
 }
 
 @media screen and (min-width: 1024px) {
@@ -472,9 +488,9 @@
         bottom: 30%;
     }
     #mainTitle{
-        font-size: 50px;
+        font-size: 35px;
         line-height: 50px;
-        width: 70%;
+        width: 100%;
     }
     #incrementSec{
         font-size: 8px;
@@ -488,6 +504,9 @@
     .reviews-container{
         font-size: 7.7px;
     }
+    .hero-video{
+        height: 45%;
+    }
     
 }
 
@@ -495,7 +514,7 @@
 
 @media screen and (min-width: 1400px) {
     #mainTitle{
-        font-size: 60px;
+        font-size: 40px;
         line-height: 65px;
     }
     #incrementSec{
@@ -503,5 +522,15 @@
     }
     .reviews-container{
         font-size: 9.2px;
+    }
+    .hero-video{
+        height: 35%;
+        /* max-width: 820px; */
+    }
+}
+
+@media screen and (min-width: 1600px){
+    .hero-video{
+        height: 40%;
     }
 }

@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
 #hero{
     font-size: 10px;
     overflow-y: auto;
@@ -35,7 +36,8 @@
     /* opacity: 0.5; */
     border-radius: 3em;
     backdrop-filter: blur(6em);
-    font-family: 'Montserrat', sans-serif;
+    /* font-family: 'Montserrat', sans-serif; */
+    font-family: 'Lato', sans-serif;
     font-style: normal;
     font-size: 10px;
     position: relative;
@@ -47,7 +49,8 @@
 }
 
 .product > h3{
-    font-family: 'Josefin Sans', sans-serif;
+    /* font-family: 'Josefin Sans', sans-serif; */
+    font-family: 'Lato', sans-serif;
     letter-spacing: 0.02em;
     font-size: 2.5em;
     margin-top: 2.5em;

@@ -2,28 +2,28 @@
     "video-1": {
         "name": "video-1",
         "title": "VIDEO-1 Title",
-        "poster": "video-1.png"
+        "poster": "video-1.jpg"
     },
     "video-2": {
         "name": "video-2",
         "title": "CarSherpas: Product Demo",
-        "poster": "video-2.png"
+        "poster": "video-2.jpg"
     },
     "video-3": {
         "name": "video-3",
         "title": "Streaming Commercials",
         "description": "Sample of streaming commercials",
-        "poster": "video-3.png"
+        "poster": "video-3.jpg"
     },
     "video-4": {
         "name": "video-4",
         "title": "Streaming Commercials",
         "description": "Streaming Commercials Sample.",
-        "poster": "video-4.png"
+        "poster": "video-4.jpg"
     },
     "video-5": {
         "name": "video-5",
         "title": "Streaming Commercials",
-        "poster": "video-5.png"
+        "poster": "video-5.jpg"
     }
 }

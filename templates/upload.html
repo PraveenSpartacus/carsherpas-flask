@@ -5,7 +5,7 @@
 <body>
 <h1>Uploading Files with Python Flask-Uploads</h1>
 <form method=POST enctype=multipart/form-data action="{{ url_for('upload') }}">
-    <input type=file name=photo accept="image/png, image/gif, image/jpeg">
+    <input class="image_upload_input" type=file name=photo accept="image/png, image/gif, image/jpeg">
     <input type="submit">
 </form>
 </body>

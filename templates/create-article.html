@@ -8,7 +8,7 @@
   {% from "includes/_formhelpers.html" import render_field %}
   <form class="form-control" method="POST" enctype=multipart/form-data action="">
     <br>
-    <input class="form-control" type=file name=photo accept="image/png, image/gif, image/jpeg" required> <br>
+    <input class="form-control image_upload_input" type=file name=photo accept="image/png, image/gif, image/jpeg" required> <br>
     <div class="form-group">
       {{ render_field(form.title, class_="form-control") }}
     </div> <br>

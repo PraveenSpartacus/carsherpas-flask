@@ -10,6 +10,7 @@ flask-wtf = "*"
 passlib = "*"
 flask-uploads = "*"
 flask-reuploaded = "*"
+colorama = "*"
 
 [dev-packages]
 
